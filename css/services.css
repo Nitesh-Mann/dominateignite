@@ -1,0 +1,193 @@
+.section1-service .heading img {
+  width: 85px;
+  height: 85px;
+}
+
+/*section2-service*/
+
+.section2-service .service-1 .btns {
+  border: 1px solid var(--body);
+  margin-top: 1em;
+}
+
+.section2-service .service-1 .btns:hover {
+  color: var(--text) !important;
+  border: 1px solid var(--text);
+}
+
+.section2-service .service-1 .btns::after {
+  display: none;
+}
+
+.section2-service {
+  border-bottom: 1px solid rgba(78, 78, 78, 0.4);
+}
+
+/*section3-service*/
+
+.section3-service {
+  border-bottom: 1px solid rgba(78, 78, 78, 0.4);
+}
+
+/*section4-service*/
+
+.section4-service {
+  padding: 6em 5em;
+  border-bottom: 1px solid rgba(78, 78, 78, 0.4);
+}
+
+.section4-service-headings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+
+.section4-service-headings .headings-content {
+  width: 35%;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.steps-container .step:nth-child(even) {
+  backdrop-filter: var(--card-style);
+  -webkit-backdrop-filter: var(var(--card-style-webkit));
+  background-color: var(--card-bg);
+  border: var(--card-border);
+}
+
+.step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 2em;
+}
+
+.step div {
+  flex-basis: 50%;
+}
+
+.step-head {
+  display: flex;
+  gap: 4em;
+  align-items: center;
+}
+
+.step-head p {
+  margin: 0;
+  font-family: var(--satoshi);
+  color: var(--text);
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--color1);
+  font-size: 14px;
+}
+
+.step-head h5 {
+  font-family: var(--satoshi);
+  font-size: 26px;
+  color: var(--text);
+  margin: 0;
+}
+
+.step-description p {
+  font-family: var(--satoshi);
+  color: var(--text);
+  font-weight: 300;
+  line-height: 30px;
+  width: 70%;
+  justify-self: end;
+  font-size: 16px;
+}
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  .section1-service .heading img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section1-service {
+    padding: 12em 1em 10em 1em;
+  }
+
+  .section1-service .heading h1 {
+    font-size: 38px;
+    line-height: 54px;
+  }
+
+  /*section2-service*/
+
+  .section2-service .service-1 .btns {
+    margin-top: 0.5em;
+  }
+
+  /*section4-service*/
+
+  .section4-service {
+    padding: 3em 1em;
+  }
+
+  .section4-service-headings {
+    display: flex;
+    margin-bottom: 2em;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .section4-service-headings .headings-content {
+    width: 100%;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 0.8em 1em;
+    gap: 1em;
+  }
+
+  .step div {
+    flex-basis: 100%;
+  }
+
+  .step-head {
+    flex-direction: column;
+    gap: 1em;
+    align-items: start;
+  }
+
+  .step-description p {
+    width: 100%;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}

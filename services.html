@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dominate Ignite</title>
+    <!--css-->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+
+    <!--boostrap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!--icons-->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+
+    <!--swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--swiper js-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!--loader-->
+    <div class="loader">
+      <span class="bar-loader"></span>
+      <span class="bar-loader"></span>
+      <span class="bar-loader"></span>
+    </div>
+
+    <!--to top-->
+    <div class="to-top">
+      <i class="ph-bold ph-caret-up"></i>
+    </div>
+
+    <!--popup-form-->
+    <div class="form-container">
+      <div class="form-wrapper">
+        <div class="col-12 col-xl-4 popup-form">
+          <i class="ph ph-x-circle form-close"></i>
+          <!-- <div class="gradient-circle"></div> -->
+          <img
+            class="rays img-fluid"
+            src="./images/rays.webp"
+            alt="gradient rays"
+          />
+          <h2>Contact Us <span> ( No fix No charge ) </span></h2>
+
+          <form
+            class="row g-4"
+            action="sendmail.php"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="col-md-6">
+              <!-- <label for="inputFirstName" class="form-label">First Name</label> -->
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First Name"
+                id="inputFirstName"
+                name="name"
+              />
+            </div>
+            <div class="col-md-6">
+              <!-- <label for="inputLastName" class="form-label">Last Name</label> -->
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Last Name"
+                id="inputLastName"
+                name="lname"
+              />
+            </div>
+            <div class="col-12">
+              <!-- <label for="inputContact" class="form-label"
+                >Contact Number</label
+              > -->
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Contact Number"
+                id="inputContact"
+                min="0"
+                name="number"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+              />
+            </div>
+            <div class="col-12">
+              <!-- <label for="inputEmail4" class="form-label">Email</label> -->
+              <input
+                type="email"
+                placeholder="Email"
+                class="form-control"
+                id="inputEmail4"
+                name="email"
+              />
+            </div>
+            <div class="col-12">
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  name="message"
+                  id="floatingTextarea2"
+                  style="height: 120px"
+                ></textarea>
+                <label for="floatingTextarea2">Comments</label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <input type="checkbox" checked required />
+              <label>
+                I agree to the
+                <a href="#!" class="showterms2">Terms & Conditions</a> and
+                <a href="#!" class="showpolicy2">Privacy Policy</a>.</label
+              >
+            </div>
+
+            <!-- Google reCAPTCHA -->
+            <div class="col-12">
+              <div
+                class="g-recaptcha"
+                data-sitekey="6Lf6l9oqAAAAACYb1vq-EuC0eYGglwQ-gdd_-MkZ"
+              ></div>
+            </div>
+
+            <div class="col-12 mt-4">
+              <button type="submit" name="sub">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--header1-->
+    <div class="header1">
+      <div class="header1-wrapper">
+        <!--header-logo-->
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="./images/ignite-logo.webp"
+              class="img-fluid"
+              alt="logo"
+              loading="lazy"
+          /></a>
+        </div>
+        <!--header-menus-->
+        <div class="menus">
+          <ul>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services </a></li>
+          </ul>
+          <a href="#!" class="btns form-btn">
+            Support <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+        <!--hamburger-->
+        <div class="hamburger" id="menu-toggle">
+          <label class="container-menu">
+            <input type="checkbox" id="menu-checkbox" />
+            <div class="checkmark">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--header2-->
+    <div class="header2">
+      <div class="header2-content">
+        <ul>
+          <li><a href="index.html">Home </a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--terms-conditon-->
+    <div class="termscontainer">
+      <div class="termscontent">
+        <div class="closeterms">
+          <i class="ph ph-x-circle"></i>
+        </div>
+        <div class="terms-head">
+          <h2>Terms and Conditions</h2>
+        </div>
+        <div class="terms">
+          <div>
+            <p><b>Last Updated: 17th February</b></p>
+            <p>
+              2025 Welcome to Suspension by Dominate Ignite (the “Website”). By
+              accessing or using our Website, you agree to be bound by these
+              Terms and Conditions (“Terms”). Please read them carefully. If you
+              do not agree with these Terms, please do not use our Website.
+            </p>
+          </div>
+          <div class="terms-list">
+            <ol>
+              <li>
+                <b>Acceptance of Terms</b>
+                <p>
+                  By accessing and using this Website, you acknowledge that you
+                  have read, understood, and agree to be bound by these Terms
+                  and any amendments that may be made from time to time. If you
+                  do not agree with these Terms, please discontinue using the
+                  Website immediately.
+                </p>
+              </li>
+              <li>
+                <b>Use of the Website</b>
+                <ul>
+                  <li>
+                    <b>Eligibility:</b> You must be at least 18 years old to use
+                    this Website. By using the Website, you represent and
+                    warrant that you meet this requirement.
+                  </li>
+                  <li>
+                    <b>License:</b> We grant you a limited, non-exclusive,
+                    non-transferable, and revocable license to access and use
+                    the Website for your personal or internal business use,
+                    subject to these Terms.
+                  </li>
+                  <li>
+                    <b>Restrictions:</b> You agree not to:
+                    <ul>
+                      <li>
+                        Modify, reproduce, or distribute any content from the
+                        Website without our express written consent.
+                      </li>
+                      <li>
+                        Use the Website for any unlawful purpose or in violation
+                        of any applicable law or regulation.
+                      </li>
+                      <li>
+                        Attempt to gain unauthorized access to any part of the
+                        Website or its related systems.
+                        <ol>
+                          <li>Accessing restricted areas or data.</li>
+                          <li>
+                            Attempting to interfere with the website’s
+                            functionality.
+                          </li>
+                          <li>
+                            Using any unauthorized means to extract data from
+                            the website.
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b> Intellectual Property</b>
+                <p>
+                  All content available on this Website, including but not
+                  limited to text, graphics, logos, images, and software, is the
+                  property of Dominate Ignite or its licensors and is protected
+                  by applicable intellectual property laws. You agree not to
+                  use, reproduce, or distribute any of our content without prior
+                  written permission.
+                </p>
+              </li>
+              <li>
+                <b> Services</b>
+                <p>
+                  Our Website may provide information about services related to
+                  account suspension and reinstatement (“Services”). Any
+                  information provided on the Website is for informational
+                  purposes only and should not be construed as professional
+                  advice. We reserve the right to modify or discontinue any
+                  Service at any time without notice.
+                </p>
+              </li>
+              <li>
+                <b> Disclaimers</b>
+                <ul>
+                  <li>
+                    <b>No Warranty:</b> The Website and all content, materials,
+                    and services provided on it are provided “as is” and “as
+                    available” without any warranties of any kind, either
+                    express or implied. We do not warrant that the Website will
+                    be uninterrupted, error-free, or completely secure.
+                  </li>
+                  <li>
+                    <b>Limitation of Liability:</b> In no event shall Dominate
+                    Ignite, its affiliates, or their respective officers,
+                    directors, or employees be liable for any direct, indirect,
+                    incidental, special, or consequential damages resulting from
+                    your use or inability to use the Website or any errors or
+                    omissions in the content provided.
+                  </li>
+                  <li>
+                    <b>External Links:</b> The Website may contain links to
+                    third-party websites. We are not responsible for the content
+                    or practices of these external sites, and your use of such
+                    sites is at your own risk.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b> User Conduct</b>
+                <p>
+                  You agree to use the Website in a manner that does not
+                  infringe upon the rights of others, violate any laws, or
+                  disrupt the operation of the Website. Prohibited activities
+                  include, but are not limited to, hacking, transmitting
+                  viruses, or any other malicious behavior.
+                </p>
+              </li>
+              <li>
+                <b>Privacy</b>
+                <p>
+                  Your privacy is important to us. Please refer to our Privacy
+                  Policy for information on how we collect, use, and disclose
+                  personal data.
+                </p>
+              </li>
+              <li>
+                <b>Changes to Terms</b>
+                <p>
+                  We reserve the right to modify these Terms at any time. Any
+                  changes will be effective immediately upon posting on the
+                  Website. Your continued use of the Website after any changes
+                  constitutes your acceptance of the new Terms.
+                </p>
+              </li>
+              <li>
+                <b>Governing Law</b>
+                <p>
+                  These Terms shall be governed by and construed in accordance
+                  with the laws of [Insert Jurisdiction]. Any disputes arising
+                  out of or relating to these Terms shall be resolved in the
+                  courts of [Insert Jurisdiction].
+                </p>
+              </li>
+              <li>
+                <b>Contact Us</b>
+                <ul>
+                  <li>
+                    If you have any questions or concerns about these Terms,
+                    please contact us at:
+                  </li>
+                  <li><b>Email: info@dominate-ignite.com</b></li>
+                  <li>
+                    <b> Address: 1750 Tysons Blvd Suite 1500 McLean VA 22102</b>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <p>
+              <i>
+                By using this Website, you acknowledge that you have read,
+                understood, and agree to these Terms and Conditions.</i
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--privacy policy-->
+    <div class="policycontainer">
+      <div class="policycontent">
+        <div class="closepolicy">
+          <i class="ph ph-x-circle"></i>
+        </div>
+        <div class="policy-head">
+          <h2>Privacy Policy</h2>
+        </div>
+        <div class="policy">
+          <div>
+            <p><b>Last Updated: 17th February 2025</b></p>
+            <p>
+              At Suspension by Dominate Ignite, we value your privacy and are
+              committed to protecting your personal information. This Privacy
+              Policy explains how we collect, use, disclose, and safeguard your
+              data when you visit our website
+              https://suspension.dominate-ignite.com (the “Site”). By using our
+              Site, you agree to the practices described in this Policy.
+            </p>
+          </div>
+          <div class="policy-list">
+            <ol>
+              <li>
+                <b>Information We Collect</b>
+                <div>
+                  <b>Personal Information</b>
+                  <p>
+                    We may collect personal information that you voluntarily
+                    provide to us when you interact with our Site. This may
+                    include:
+                  </p>
+                  <ul>
+                    <li>
+                      Your name, email address, phone number, and mailing
+                      address.
+                    </li>
+                    <li>
+                      Any other information you provide when contacting us or
+                      requesting our services.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <b>Usage Data</b>
+                  <p>
+                    We automatically collect certain information when you visit
+                    our Site, such as:
+                  </p>
+                  <ul>
+                    <li>IP address, browser type, and operating system.</li>
+                    <li>
+                      Pages visited, time spent on the site, and referring URLs.
+                    </li>
+                    <li>
+                      Cookies and similar tracking technologies to enhance your
+                      experience.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <b>How We Use Your Information</b>
+                <p>
+                  We use the information we collect for various purposes,
+                  including to:
+                </p>
+                <ul>
+                  <li>Provide, operate, and maintain our Site.</li>
+                  <li>Improve your experience on our Site.</li>
+                  <li>Respond to your comments, questions, and requests.</li>
+                  <li>
+                    Send you technical notices, updates, and security alerts.
+                  </li>
+                  <li>
+                    Monitor and analyze usage and trends to improve our
+                    services.
+                  </li>
+                  <li>Comply with legal obligations and protect our rights.</li>
+                </ul>
+              </li>
+              <li>
+                <b>Disclosure of Your Information</b>
+                <p>
+                  We may share your information in the following situations:
+                </p>
+                <ul>
+                  <li>
+                    Service Providers: With third-party vendors who assist us in
+                    operating our Site and providing our services.
+                  </li>
+                  <li>
+                    Legal Requirements: When required to comply with a legal
+                    obligation, protect our rights, or investigate fraud.
+                  </li>
+                  <li>
+                    Business Transfers: In connection with a merger,
+                    acquisition, or sale of assets, where your information may
+                    be transferred as part of the transaction.
+                  </li>
+                  <li>
+                    With Your Consent: We may share your information with other
+                    parties if you provide your consent.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Cookies and Tracking Technologies</b>
+                <p>We use cookies and similar tracking technologies to:</p>
+                <ul>
+                  <li>Enhance your user experience on our Site.</li>
+                  <li>Analyze site usage and performance.</li>
+                  <li>Personalize content and advertising.</li>
+                </ul>
+                <p>
+                  You can adjust your browser settings to refuse cookies;
+                  however, please note that some parts of our Site may not
+                  function properly if you disable cookies.
+                </p>
+              </li>
+              <li>
+                <b>Data Security</b>
+                <p>
+                  We implement reasonable security measures to protect your
+                  personal information from unauthorized access, alteration,
+                  disclosure, or destruction. However, no internet transmission
+                  or storage method is 100% secure, and we cannot guarantee
+                  absolute security.
+                </p>
+              </li>
+              <li>
+                <b> International Data Transfers</b>
+                <p>
+                  Your information may be transferred to and maintained on
+                  servers located outside of your state, province, or country.
+                  By using our Site, you consent to the transfer of your data to
+                  jurisdictions that may have different data protection laws
+                  than your jurisdiction.
+                </p>
+              </li>
+              <li>
+                <b>Your Rights and Choices</b>
+                <p>
+                  Depending on your location, you may have certain rights
+                  regarding your personal information, including:
+                </p>
+                <ul>
+                  <li>The right to access and update your data.</li>
+                  <li>The right to request the deletion of your data.</li>
+                  <li>
+                    The right to object to or restrict our processing of your
+                    data.
+                  </li>
+                  <li>The right to withdraw consent at any time.</li>
+                </ul>
+                <p>
+                  To exercise these rights, please contact us using the
+                  information provided below.
+                </p>
+              </li>
+              <li>
+                <b>Changes to This Privacy Policy</b>
+                <p>
+                  We may update this Privacy Policy from time to time. Any
+                  changes will be posted on this page with an updated revision
+                  date. We encourage you to review this Policy periodically for
+                  any updates.
+                </p>
+              </li>
+              <li>
+                <b>Contact Us</b>
+                <ul>
+                  <li>
+                    If you have any questions or concerns about this Privacy
+                    Policy or our data practices, please contact us at:
+                  </li>
+                  <li><b>Email: info@dominate-ignite.com</b></li>
+                  <li>
+                    <b> Address: 1750 Tysons Blvd Suite 1500 McLean VA 22102</b>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <p>
+              <i>
+                By using our Site, you acknowledge that you have read and
+                understand this Privacy Policy and agree to its terms..</i
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--service-section1-->
+    <div class="section1 section1-service">
+      <img class="grid img-fluid" src="./images/grid.webp" alt="lines grid" />
+      <img
+        class="rays img-fluid"
+        src="./images/rays.webp"
+        alt="gradient rays"
+      />
+      <div class="col-12 col-xl-10 section1-content">
+        <div class="heading">
+          <h1>
+            Dominate Ignite Services
+            <span>
+              <img src="./images/service.webp" />
+            </span>
+            Unlock & Restore Suspended Google Accounts
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!--about-section5-->
+    <!--section2-service-->
+    <div class="section5-about section2-service">
+      <div class="row d-flex justify-content-between g-4 g-xl-0">
+        <div class="col-12 col-xl-5">
+          <div class="section5-about-heading">
+            <h2 class="headings">Our Services</h2>
+            <p class="headings-content">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
+              optio voluptatem, soluta tenetur fugit corrupti voluptas ipsam
+              similique sunt.
+            </p>
+            <a href="#!" class="btns form-btn mt-4">
+              Get Started <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-xl-7">
+          <div class="row service-row">
+            <div class="col-12 col-xl-6 service-bg">
+              <div class="service-1 bg-service">
+                <p>01</p>
+                <h4>lore ipsum</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Recusandae, laborum? Soluta, atque dolore possimus odio
+                  laborum laboriosam? Non eum explicabo libero adipisci.
+                </p>
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-xl-6">
+              <div class="service-1">
+                <p>02</p>
+                <h4>lore ipsum dolor</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Recusandae, laborum? Soluta, atque dolore possimus odio
+                  laborum laboriosam? Non eum explicabo libero adipisci.
+                </p>
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-xl-6">
+              <div class="service-1">
+                <p>03</p>
+                <h4>lore ipsum</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Recusandae, laborum? Soluta, atque dolore possimus odio
+                  laborum laboriosam? Non eum explicabo libero adipisci.
+                </p>
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-xl-6 service-bg-2">
+              <div class="service-1 bg-service">
+                <p>04</p>
+                <h4>lore ipsum</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Recusandae, laborum? Soluta, atque dolore possimus odio
+                  laborum laboriosam? Non eum explicabo libero adipisci.
+                </p>
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--section7-->
+    <!--section3-service-->
+    <div class="section7 section3-service">
+      <div class="swiper mySwiper">
+        <div class="head-btns">
+          <div class="section5-headings a13">
+            <h2 class="headings">Suspension Services</h2>
+          </div>
+          <div class="swiper-btns-desk d-none d-lg-block a14">
+            <div class="swiper-btns">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper a15">
+          <div class="swiper-slide">
+            <div class="price-card">
+              <div class="price-head">
+                <h4>Suspicious Payment Activity</h4>
+                <p>$999</p>
+              </div>
+
+              <div class="price-list">
+                <ul>
+                  <li>Investigate suspicious payment activities.</li>
+                  <li>Ensure secure transactions.</li>
+                  <li>Prompt and effective resolution.</li>
+                </ul>
+              </div>
+              <div class="price-button">
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="price-card">
+              <div class="price-head">
+                <h4>Suspicious Payment Activity</h4>
+                <p>$999</p>
+              </div>
+
+              <div class="price-list">
+                <ul>
+                  <li>Investigate suspicious payment activities.</li>
+                  <li>Ensure secure transactions.</li>
+                  <li>Prompt and effective resolution.</li>
+                </ul>
+              </div>
+              <div class="price-button">
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="price-card">
+              <div class="price-head">
+                <h4>Suspicious Payment Activity</h4>
+                <p>$999</p>
+              </div>
+
+              <div class="price-list">
+                <ul>
+                  <li>Investigate suspicious payment activities.</li>
+                  <li>Ensure secure transactions.</li>
+                  <li>Prompt and effective resolution.</li>
+                </ul>
+              </div>
+              <div class="price-button">
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="price-card">
+              <div class="price-head">
+                <h4>Suspicious Payment Activity</h4>
+                <p>$999</p>
+              </div>
+
+              <div class="price-list">
+                <ul>
+                  <li>Investigate suspicious payment activities.</li>
+                  <li>Ensure secure transactions.</li>
+                  <li>Prompt and effective resolution.</li>
+                </ul>
+              </div>
+              <div class="price-button">
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="price-card">
+              <div class="price-head">
+                <h4>Suspicious Payment Activity</h4>
+                <p>$999</p>
+              </div>
+
+              <div class="price-list">
+                <ul>
+                  <li>Investigate suspicious payment activities.</li>
+                  <li>Ensure secure transactions.</li>
+                  <li>Prompt and effective resolution.</li>
+                </ul>
+              </div>
+              <div class="price-button">
+                <a href="#!" class="btns form-btn">
+                  Get Started <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-btn-mob d-block d-lg-none p-4 mt-2">
+          <div class="swiper-btns">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--section4-service-->
+    <div class="section4-service">
+      <div class="section4-service-headings">
+        <h2 class="headings">What we offer</h2>
+        <p class="headings-content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor iusto
+          voluptatem, dignissimos cum fugiat nemo.
+        </p>
+      </div>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-head">
+            <p>01</p>
+            <h5>hello world</h5>
+          </div>
+          <div class="step-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus numquam distinctio tenetur exercitationem eaque sit
+              quidem doloremque qui, ipsa itaque rem.
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-head">
+            <p>02</p>
+            <h5>hello world</h5>
+          </div>
+          <div class="step-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus numquam distinctio tenetur exercitationem eaque sit
+              quidem doloremque qui, ipsa itaque rem.
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-head">
+            <p>03</p>
+            <h5>hello world</h5>
+          </div>
+          <div class="step-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus numquam distinctio tenetur exercitationem eaque sit
+              quidem doloremque qui, ipsa itaque rem.
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-head">
+            <p>04</p>
+            <h5>hello world</h5>
+          </div>
+          <div class="step-description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus numquam distinctio tenetur exercitationem eaque sit
+              quidem doloremque qui, ipsa itaque rem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--section6-->
+    <div class="section6" id="faqs">
+      <div class="gradient-circle"></div>
+      <div class="row section6-row m-0">
+        <div class="col-12 col-lg-6 a11">
+          <p class="sub-headings">FAQs</p>
+          <h2 class="headings">We’re here to answer all your questions</h2>
+          <p class="headings-content">
+            Because entrusting us with the creation of your presentation is only
+            the starting point of our shared story, we offer to go even further
+            by training you alongside us. With always the same goal in mind: to
+            convince.
+          </p>
+        </div>
+
+        <div class="col-12 col-lg-5 faqs-accordion a12">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Why was my Google Ads account suspended?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Google Ads accounts can be suspended for a variety of reasons,
+                  including policy violations, suspicious payment activity,
+                  circumventing Google's systems, and issues with unacceptable
+                  business practices. Our team will help you identify the exact
+                  cause and guide you through the recovery process.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  How long does it take to restore a suspended Google Ads
+                  account?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  The recovery process can take anywhere from a few days to a
+                  few weeks, depending on the complexity of the suspension and
+                  Google's response time. We ensure that all appeals and actions
+                  are submitted promptly to speed up the process.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Can you guarantee that my account will be restored?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  While we cannot guarantee 100% reinstatement, our expertise
+                  and proven success rate significantly improve the chances of
+                  getting your account back. We will work diligently to resolve
+                  the suspension and optimize your account to avoid future
+                  issues.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  What sets your service apart from others that restore
+                  suspended Google Ads accounts?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  We offer personalized attention, in-depth knowledge of Google
+                  Ads policies, and a comprehensive approach that includes
+                  account review, appeal submission, and campaign optimization.
+                  Our goal is to not only get your account reinstated but also
+                  improve its performance for long-term success.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                  How much do your services cost?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Our pricing is transparent and depends on the complexity of
+                  your case. We offer different packages starting from account
+                  reviews to full recovery services. Contact us for a custom
+                  quote based on your specific needs.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSix"
+                >
+                  How can I prevent future suspensions of my Google Ads account?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  To prevent future suspensions, we recommend following Google
+                  Ads policies carefully, regularly reviewing your ads and
+                  landing pages for compliance, and optimizing your campaigns to
+                  avoid violations. We can also help you set up a Google Ads
+                  management plan to ensure smooth operations.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+      <img
+        src="./images/footer-bg.webp"
+        class="footer-bg"
+        alt="gradient-rays"
+        loading="lazy"
+      />
+      <div class="footer-wrapper">
+        <div class="footer-head">
+          <div class="col-112 col-lg-10 footer-head-content">
+            <p>Let’s elevate your business to new heights</p>
+            <p>Reach out to and let’s embark on the journey together!</p>
+            <a href="#!" class="btns form-btn">
+              Get Started <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-menus">
+          <div class="row footer-menus-row">
+            <div class="col-12 col-lg-4 footer-menu-content footer-logo">
+              <a href="index.html">
+                <img
+                  src="./images/ignite-logo-footer.webp"
+                  class="img-fluid"
+                  alt="logo-image"
+                />
+              </a>
+              <ul>
+                <li><a href="tel:+17036557233"> Phone: +1 703 655-7233 </a></li>
+                <li>
+                  <a href="mailto:info@dominate-ignite.com">
+                    Email: info@dominate-ignite.com
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#!"
+                    >Opening Hours: Monday - Friday, 09:00 - 17:00
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content">
+              <p>What we offer</p>
+              <ul>
+                <li><a href="#!">Expertise and experience</a></li>
+                <li><a href="#!">Review and action plan</a></li>
+                <li><a href="#!">Appeals and communication</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content">
+              <p>How it works</p>
+              <ul>
+                <li><a href="#!"> Initial Consultation</a></li>
+                <li><a href="#!"> Account Review and Strategy </a></li>
+                <li><a href="#!">Actions and Appeals </a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content">
+              <p>Quick Links</p>
+              <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services </a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content follow-us">
+              <p>Follow Us</p>
+              <ul>
+                <li>
+                  <a href="#!">
+                    <i class="ph-fill ph-facebook-logo"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!"> <i class="ph-fill ph-x-logo"></i> </a>
+                </li>
+                <li>
+                  <a href="#!"> <i class="ph-fill ph-instagram-logo"></i> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>© 2025 . All Rights Reserved.</p>
+          <p class="policies">
+            <a href="#!" class="showterms"> Terms of Use </a> |
+            <a href="#!" class="showprivacy"> Privacy Policy </a>|
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--bootstrap js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- captcha  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!--script-->
+    <script src="./script/index.js"></script>
+  </body>
+</html>
