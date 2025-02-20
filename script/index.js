@@ -248,3 +248,53 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleBodyScroll(false); // Enable scrolling
   });
 });
+
+//refund //
+// terms //
+document.addEventListener("DOMContentLoaded", function () {
+  const refundBtns = document.querySelectorAll(".showrefund, .showrefund2");
+  const refundWrapper = document.querySelector(".refundcontainer");
+  const closeRefund = document.querySelector(".closerefund");
+
+  if (!refundBtns.length || !refundWrapper || !closeRefund) return;
+
+  refundWrapper.style.display = "none";
+
+  function toggleBodyScroll(disable) {
+    const body = document.body;
+    body.style.overflow = disable ? "hidden" : "";
+  }
+
+  function showRefundPopup(event) {
+    event.stopPropagation();
+    const wrapper = refundWrapper;
+    wrapper.style.display = "block";
+    toggleBodyScroll(true);
+  }
+
+  function hideRefundPopup() {
+    const wrapper = refundWrapper;
+    wrapper.style.display = "none";
+    toggleBodyScroll(false);
+  }
+
+  function handleClickOutside(event) {
+    const wrapper = refundWrapper;
+    const isVisible = wrapper.style.display === "block";
+    const clickedInside =
+      event.target.closest(".termscontent") ||
+      event.target.closest(".showrefund") ||
+      event.target.closest(".showrefund2");
+
+    if (isVisible && !clickedInside) {
+      hideRefundPopup();
+    }
+  }
+
+  refundBtns.forEach((btn) => {
+    btn.addEventListener("click", showRefundPopup);
+  });
+
+  closeRefund.addEventListener("click", hideRefundPopup);
+  document.addEventListener("click", handleClickOutside);
+});
