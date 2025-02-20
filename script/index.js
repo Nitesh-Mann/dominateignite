@@ -11,7 +11,7 @@ document.getElementById("contactForm").onsubmit = function (event) {
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
-  loop: true,
+  loop: false,
   freeMode: false,
   navigation: {
     nextEl: ".swiper-button-next",
