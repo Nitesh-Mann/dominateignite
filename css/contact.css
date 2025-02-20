@@ -1,0 +1,121 @@
+/*contact page */
+
+.contact-page {
+  background-color: var(--body);
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  padding-top: 14vw;
+}
+
+.contact-head h1 {
+  font-size: 92px;
+  font-family: var(--national);
+  font-weight: 500;
+  color: var(--text);
+  padding-bottom: 5vw;
+  border-bottom: 1px solid var(--color6);
+  margin-bottom: 4vw;
+}
+
+.contact-head form {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.contact-head form label {
+  font-family: var(--satoshi);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-bottom: 20px;
+}
+
+.contact-head form label span {
+  color: var(--text);
+  font-size: 18px;
+}
+
+.contact-head form input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color3);
+  padding: 20px;
+  caret-color: var(--white);
+  color: var(--text);
+}
+
+.contact-head form input:focus {
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text);
+}
+
+.contact-head form input::placeholder {
+  font-family: var(--satoshi);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.contact-head form textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--text);
+  color: var(--text);
+}
+
+.contact-head form textarea:focus {
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text);
+}
+
+.contact-head form button {
+  text-transform: uppercase;
+  padding: 18px 32px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 30px;
+}
+
+.contact-profile .contact-img img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--text);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-details h4 {
+  font-family: var(--satoshi);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color2);
+}
+
+.contact-details a {
+  text-decoration: none;
+  font-family: var(--satoshi);
+  font-weight: 500;
+  color: var(--text);
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.contact-profile i {
+  font-size: 22px;
+  color: var(--text);
+}
