@@ -78,7 +78,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 500;
-  transition: 0.8s;
+  transition: 0.9s;
 }
 
 .work-loader {
@@ -92,7 +92,9 @@ body {
 }
 
 .hidden {
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
+  opacity: 0;
+  z-index: -8 !important;
 }
 
 .bar-loader {
