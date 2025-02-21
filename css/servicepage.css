@@ -1,0 +1,97 @@
+.section1-servicepage {
+  padding: 12vw 5em 5em 5em;
+  min-height: 100vh;
+}
+
+.section1-servicepage-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.servicepage-wrapper h2 {
+  font-family: var(--national);
+  color: var(--text);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 84px;
+  margin-bottom: 0.8em;
+  letter-spacing: 0.5px;
+}
+
+.servicepage-content {
+  color: var(--text);
+  font-family: var(--satoshi);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-right: 2em;
+}
+
+.servicepage-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--color2);
+}
+
+.servicepage-content h5 {
+  font-size: 18px;
+  color: var(--color2);
+}
+
+.servicepage-content p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.servicepage-content li {
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.servicepage-content ol {
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.servicepage-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.servicepage-content h3 {
+  font-family: var(--national);
+  margin-bottom: 0.8em;
+  font-size: 40px;
+}
+
+.servicepage-content .whychoose ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.servicepage-content .faqs-accordion h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+.servicepage-content .accordion-button {
+  padding: 1em;
+}
+
+.servicepage-form {
+  position: sticky;
+  top: 20px;
+}
+
+.servicepage-form .sticky-form {
+  padding: 0em 2em;
+}
