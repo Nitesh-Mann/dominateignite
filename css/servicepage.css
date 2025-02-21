@@ -89,9 +89,77 @@
 
 .servicepage-form {
   position: sticky;
-  top: 20px;
+  top: 30px;
 }
 
 .servicepage-form .sticky-form {
   padding: 0em 2em;
+}
+
+.servicepage-form h2 {
+  font-size: 34px;
+}
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  .section1-servicepage {
+    padding: 24vw 1em 0em 1em;
+  }
+
+  .section1-servicepage-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .servicepage-wrapper h2 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .servicepage-content {
+    padding-right: 0em;
+  }
+
+  .servicepage-content h4 {
+    line-height: 32px;
+  }
+
+  .servicepage-content h5 {
+    font-size: 18px;
+    color: var(--color2);
+  }
+
+  .servicepage-content h3 {
+    font-family: var(--national);
+    margin-bottom: 0.8em;
+    font-size: 40px;
+  }
+
+  .servicepage-form .sticky-form {
+    padding: 0em 0em;
+  }
+
+  .servicepage-form .popup-form {
+    padding: 3em 1em;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }

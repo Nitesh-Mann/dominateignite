@@ -249,51 +249,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//refund //
 document.addEventListener("DOMContentLoaded", function () {
   const refundBtns = document.querySelectorAll(".showrefund, .showrefund2");
   const refundWrapper = document.querySelector(".refundcontainer");
   const closeRefund = document.querySelector(".closerefund");
 
+  // Ensure elements exist before applying event listeners
   if (!refundBtns.length || !refundWrapper || !closeRefund) return;
 
+  // Ensure the refund container is hidden by default
   refundWrapper.style.display = "none";
 
+  // Function to disable/enable scrolling
   function toggleBodyScroll(disable) {
-    const body = document.body;
-    body.style.overflow = disable ? "hidden" : "";
+    document.body.style.overflow = disable ? "hidden" : "";
   }
 
-  function showRefundPopup(event) {
-    event.stopPropagation();
-    const wrapper = refundWrapper;
-    wrapper.style.display = "block";
-    toggleBodyScroll(true);
-  }
-
-  function hideRefundPopup() {
-    const wrapper = refundWrapper;
-    wrapper.style.display = "none";
-    toggleBodyScroll(false);
-  }
-
-  function handleClickOutside(event) {
-    const wrapper = refundWrapper;
-    const isVisible = wrapper.style.display === "block";
-    const clickedInside =
-      event.target.closest(".termscontent") ||
-      event.target.closest(".showrefund") ||
-      event.target.closest(".showrefund2");
-
-    if (isVisible && !clickedInside) {
-      hideRefundPopup();
-    }
-  }
-
+  // Show refund popup when any button is clicked
   refundBtns.forEach((btn) => {
-    btn.addEventListener("click", showRefundPopup);
+    btn.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent document click from immediately closing it
+      refundWrapper.style.display = "block";
+      toggleBodyScroll(true); // Disable scrolling
+    });
   });
 
-  closeRefund.addEventListener("click", hideRefundPopup);
-  document.addEventListener("click", handleClickOutside);
+  // Hide when clicking outside the content
+  document.addEventListener("click", function (event) {
+    if (
+      refundWrapper.style.display === "block" &&
+      !event.target.closest(".refundcontent") &&
+      !event.target.closest(".showrefund") && // Ensure clicking the button doesn’t immediately close it
+      !event.target.closest(".showrefund2")
+    ) {
+      refundWrapper.style.display = "none";
+      toggleBodyScroll(false); // Enable scrolling
+    }
+  });
+
+  // Hide when clicking the close button
+  closeRefund.addEventListener("click", function () {
+    refundWrapper.style.display = "none";
+    toggleBodyScroll(false); // Enable scrolling
+  });
 });

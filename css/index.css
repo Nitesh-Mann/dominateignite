@@ -349,7 +349,7 @@ body {
 }
 
 .popup-form .checkbox-input label {
-  line-height: 22px;
+  line-height: 32px;
 }
 
 .popup-form .checkbox-input input {
@@ -1209,14 +1209,18 @@ body {
 /* mobile phones to tablet devices*/
 @media (max-width: 991.98px) {
   /* terms and policies */
-  .terms-container .terms-content {
+  .termscontainer .termscontent,
+  .policycontainer .policycontent,
+  .refundcontainer .refundcontent {
     width: 100%;
     background-color: var(--white);
     padding: 1em;
     overflow-y: scroll;
   }
 
-  .terms-container .terms-head h2 {
+  .termscontainer .terms-head h2,
+  .policycontainer .policy-head h2,
+  .refundcontainer .refund-head h2 .terms-container .terms-head h2 {
     font-family: var(--national);
     margin-top: 1em;
     margin-bottom: 1em;
@@ -1224,7 +1228,9 @@ body {
     border-bottom: 1px solid var(--color3);
   }
 
-  .terms-container .terms p {
+  .termscontainer .terms p,
+  .policycontainer .policy p,
+  .refundcontainer .refund p {
     font-family: var(--satoshi);
   }
 
@@ -1628,7 +1634,9 @@ body {
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
   /* terms and policies */
-  .terms-container .terms-content {
+  .termscontainer .termscontent,
+  .policycontainer .policycontent,
+  .refundcontainer .refundcontent {
     width: 60%;
     background-color: var(--white);
     padding: 1em;
