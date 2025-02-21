@@ -570,6 +570,12 @@ body {
   overflow-y: scroll;
 }
 
+.termscontainer .termscontent a,
+.policycontainer .policycontent a,
+.refundcontainer .refundcontent a {
+  text-decoration: none;
+}
+
 .termscontainer .closeterms,
 .policycontainer .closepolicy,
 .refundcontainer .closerefund {

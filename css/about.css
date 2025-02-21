@@ -266,9 +266,11 @@
 
 .service-1 h4 {
   font-family: var(--satoshi);
-  font-size: 24px;
+  font-size: 22px;
   color: var(--text);
   margin: 0;
+  line-height: 32px;
+  text-transform: capitalize;
 }
 
 .service-1 p:nth-child(3) {

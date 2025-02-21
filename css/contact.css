@@ -137,6 +137,11 @@
   gap: 8px !important;
   margin: 0 !important;
 }
+
+.checkbox-input label a {
+  text-decoration: none;
+}
+
 /*responsive*/
 
 /* mobile phones to tablet devices*/

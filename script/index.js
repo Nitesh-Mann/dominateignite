@@ -250,7 +250,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //refund //
-// terms //
 document.addEventListener("DOMContentLoaded", function () {
   const refundBtns = document.querySelectorAll(".showrefund, .showrefund2");
   const refundWrapper = document.querySelector(".refundcontainer");
