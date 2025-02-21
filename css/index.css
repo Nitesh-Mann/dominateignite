@@ -1019,7 +1019,7 @@ body {
   background-color: var(--card-bg);
   border-radius: var(--card-border-radius);
   border: var(--card-border);
-  height: 520px;
+  height: 540px;
   padding: 3em 2em;
   display: flex;
   flex-direction: column;
@@ -1036,6 +1036,11 @@ body {
 
 .price-list {
   height: 160px;
+}
+
+.price-head,
+.price-list {
+  flex-grow: 1;
 }
 
 .price-card .price-head h4 {
