@@ -1019,7 +1019,7 @@ body {
   background-color: var(--card-bg);
   border-radius: var(--card-border-radius);
   border: var(--card-border);
-  min-height: 520px;
+  height: 520px;
   padding: 3em 2em;
   display: flex;
   flex-direction: column;
@@ -1030,7 +1030,7 @@ body {
 }
 
 .price-head {
-  height: 150px;
+  min-height: 180px;
   overflow: hidden;
 }
 
