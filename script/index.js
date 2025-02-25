@@ -1,9 +1,9 @@
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    // This event is triggered when the page is loaded from the cache (back button action)
-    location.reload();
-  }
-});
+// window.addEventListener("pageshow", function (event) {
+//   if (event.persisted) {
+//     // This event is triggered when the page is loaded from the cache (back button action)
+//     location.reload();
+//   }
+// });
 
 //loader animation//
 window.addEventListener("load", function () {
@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
     if (loader) {
       loader.classList.add("hidden");
     }
-  }, 500); // 1 second delay for loader
+  }, 800); // 1 second delay for loader
 });
 
 // captcha
