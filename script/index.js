@@ -1,9 +1,9 @@
-// window.addEventListener("pageshow", function (event) {
-//   if (event.persisted) {
-//     // This event is triggered when the page is loaded from the cache (back button action)
-//     location.reload();
-//   }
-// });
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    // This event is triggered when the page is loaded from the cache (back button action)
+    location.reload();
+  }
+});
 
 //loader animation//
 window.addEventListener("load", function () {
