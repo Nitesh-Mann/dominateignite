@@ -346,10 +346,12 @@ body {
 .popup-form .checkbox-input {
   display: flex;
   gap: 16px;
+  align-items: start;
 }
 
 .popup-form .checkbox-input label {
   line-height: 32px;
+  font-size: 18px !important;
 }
 
 .popup-form .checkbox-input input {

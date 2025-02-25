@@ -125,17 +125,18 @@
 .checkbox-input {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
 }
 
 .checkbox-input input {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .checkbox-input label {
   gap: 8px !important;
   margin: 0 !important;
+  font-size: 20px !important;
 }
 
 .checkbox-input label a {

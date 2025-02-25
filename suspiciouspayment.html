@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dominate Ignite</title>
+    <!--css-->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/servicepage.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <!--boostrap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!--icons-->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+
+    <!--swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--swiper js-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!--loader-->
+    <div class="loader">
+      <span class="bar-loader"></span>
+      <span class="bar-loader"></span>
+      <span class="bar-loader"></span>
+    </div>
+
+    <!--to top-->
+    <div class="to-top">
+      <i class="ph-bold ph-caret-up"></i>
+    </div>
+
+    <!--popup-form-->
+    <div class="form-container">
+      <div class="form-wrapper">
+        <div class="col-12 col-xl-4 popup-form">
+          <i class="ph ph-x-circle form-close"></i>
+          <!-- <div class="gradient-circle"></div> -->
+          <img
+            class="rays img-fluid"
+            src="./images/rays.webp"
+            alt="gradient rays"
+          />
+          <h2>Contact Us <span> ( No fix No charge ) </span></h2>
+
+          <form
+            class="row g-4"
+            action="sendmail.php"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="col-md-6">
+              <!-- <label for="inputFirstName" class="form-label">First Name</label> -->
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First Name"
+                id="inputFirstName"
+                name="name"
+              />
+            </div>
+            <div class="col-md-6">
+              <!-- <label for="inputLastName" class="form-label">Last Name</label> -->
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Last Name"
+                id="inputLastName"
+                name="lname"
+              />
+            </div>
+            <div class="col-12">
+              <!-- <label for="inputContact" class="form-label"
+                >Contact Number</label
+              > -->
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Contact Number"
+                id="inputContact"
+                min="0"
+                name="number"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+              />
+            </div>
+            <div class="col-12">
+              <!-- <label for="inputEmail4" class="form-label">Email</label> -->
+              <input
+                type="email"
+                placeholder="Email"
+                class="form-control"
+                id="inputEmail4"
+                name="email"
+              />
+            </div>
+            <div class="col-12">
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  name="message"
+                  id="floatingTextarea2"
+                  style="height: 100px"
+                ></textarea>
+                <label for="floatingTextarea2">Comments</label>
+              </div>
+            </div>
+
+            <div class="col-12 checkbox-input">
+              <input type="checkbox" checked required />
+              <label>
+                I agree to the
+                <a href="#!" class="showterms2">Terms of Service </a> ,
+                <a href="#!" class="showpolicy2">Privacy Policy</a> and
+                <a href="#!" class="showrefund"> Refund Policy </a>
+              </label>
+            </div>
+
+            <!-- Google reCAPTCHA -->
+            <div class="col-12">
+              <div
+                class="g-recaptcha"
+                data-sitekey="6Lf6l9oqAAAAACYb1vq-EuC0eYGglwQ-gdd_-MkZ"
+              ></div>
+            </div>
+
+            <div class="col-12 mt-4">
+              <button type="submit" name="sub">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--header1-->
+    <div class="header1">
+      <div class="header1-wrapper">
+        <!--header-logo-->
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="./images/ignite-logo.webp"
+              class="img-fluid"
+              alt="logo"
+              loading="lazy"
+          /></a>
+        </div>
+        <!--header-menus-->
+        <div class="menus">
+          <ul>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services </a></li>
+            <li><a href="contact.html"> Contact Us </a></li>
+          </ul>
+          <a href="#!" class="btns form-btn">
+            Support <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+        <!--hamburger-->
+        <div class="hamburger" id="menu-toggle">
+          <label class="container-menu">
+            <input type="checkbox" id="menu-checkbox" />
+            <div class="checkmark">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--header2-->
+    <div class="header2">
+      <div class="header2-content">
+        <ul>
+          <li><a href="index.html">Home </a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services </a></li>
+          <li><a href="contact.html"> Contact Us </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--terms-conditon-->
+    <div class="termscontainer">
+      <div class="termscontent">
+        <div class="closeterms">
+          <i class="ph ph-x-circle"></i>
+        </div>
+        <div class="terms-head">
+          <h2>Terms of Service</h2>
+        </div>
+        <div class="terms">
+          <div class="terms-list">
+            <ol>
+              <li>
+                <b>Iroduction</b>
+                <p>
+                  Welcome to Dominate Ignite ("Company," "we," "us," or "our").
+                  These Terms of Service ("Terms") govern your access to and use
+                  of our website
+                  <a href="www.dominate-ignite.com">
+                    www.dominate-ignite.com
+                  </a>
+                  (the "Website") and the services we provide (collectively, the
+                  "Services"). By accessing or using our Services, you agree to
+                  be bound by these Terms.
+                </p>
+                <p>
+                  Please read these Terms carefully before using our Services.
+                  If you do not agree to these Terms, you may not access or use
+                  our Services.
+                </p>
+              </li>
+              <li>
+                <b>Services Description</b>
+                <p>
+                  Dominate Ignite specializes in providing consulting services
+                  to assist clients in appealing suspensions of their Google
+                  accounts (the "Services"). Our Services include:
+                </p>
+                <ul>
+                  <li>Analyzing the reasons for account suspension.</li>
+                  <li>Advising on compliance with Google's policies.</li>
+                  <li>
+                    Assisting in the preparation and submission of appeals to
+                    Google.
+                  </li>
+                </ul>
+                <p>
+                  Please note: While we strive to provide the best possible
+                  guidance, we cannot guarantee the reinstatement of your Google
+                  account, as the final decision rests solely with Google.
+                </p>
+              </li>
+              <li>
+                <b> Eligibility</b>
+                <p>By using our Services, you represent and warrant that:</p>
+                <ul>
+                  <li>You are at least 18 years of age.</li>
+                  <li>
+                    You have the legal capacity to enter into a binding
+                    contract.
+                  </li>
+                  <li>
+                    All information you provide to us is true, accurate, and
+                    complete.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Client Responsibilities</b>
+                <ul>
+                  <li>
+                    <b>Provide Accurate Information:</b> You agree to provide
+                    all necessary and accurate information required for us to
+                    perform the Services.
+                  </li>
+                  <li>
+                    <b>Compliance with Laws:</b> You are responsible for
+                    ensuring that your business practices comply with all
+                    applicable laws and regulations.
+                  </li>
+                  <li>
+                    <b>Timely Cooperation:</b> You agree to cooperate with us in
+                    a timely manner, including responding to requests for
+                    information and providing necessary documentation.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Fees and Payment</b>
+                <ul>
+                  <li>
+                    <b>Service Fees:</b> Fees for our Services will be agreed
+                    upon in a separate written agreement or invoice.
+                  </li>
+                  <li>
+                    <b>Payment Terms:</b> Payments are due as specified in the
+                    invoice or agreement. Failure to pay may result in
+                    suspension or termination of Services.
+                  </li>
+                  <li>
+                    <b>Refunds:</b> We strive to ensure complete satisfaction
+                    with our Services. If you are not fully satisfied with our
+                    work, you may be eligible for a refund under the terms
+                    outlined in our
+                    <a href="#!" class="showrefund"> Refund Policy </a>
+                    . Refund requests must be made in writing within 30 days of
+                    the completion of the Service and are limited to a maximum
+                    of 55% of the total order value. Please refer to our Refund
+                    Policy for detailed information on eligibility, submission,
+                    and processing of refunds.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>No Guarantee of Results</b>
+                <ul>
+                  <li>
+                    <b>Acknowledgment:</b> You acknowledge and agree that
+                    Dominate Ignite does not guarantee the reinstatement of your
+                    suspended Google account.
+                  </li>
+                  <li>
+                    <b>Limitation of Liability:</b> We shall not be held liable
+                    for any failure to achieve desired outcomes, including
+                    account reinstatement, as decisions are made solely by
+                    Google.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Intellectual Property Rights</b>
+                <ul>
+                  <li>
+                    <b>Ownership:</b> All materials, documents, and content
+                    provided by Dominate Ignite are owned by us and protected by
+                    intellectual property laws.
+                  </li>
+                  <li>
+                    <b>License:</b> We grant you a limited, non-exclusive,
+                    non-transferable license to use the materials solely for
+                    your personal use in connection with the Services.
+                  </li>
+                  <li>
+                    <b>Restrictions:</b> You may not reproduce, distribute,
+                    modify, or create derivative works of our materials without
+                    our prior written consent.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b> Confidentiality</b>
+                <ul>
+                  <li>
+                    <b>Confidential Information:</b> Both parties agree to keep
+                    confidential any proprietary or sensitive information
+                    disclosed during the course of the Services.
+                  </li>
+                  <li>
+                    <b>Non-Disclosure:</b> Neither party shall disclose
+                    confidential information to any third party without the
+                    prior written consent of the other party, except as required
+                    by law.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Disclaimer of Warranties</b>
+                <ul>
+                  <li>
+                    <b>Services Provided "As Is":</b> Our Services are provided
+                    on an "as is" and "as available" basis without warranties of
+                    any kind, either express or implied.
+                  </li>
+                  <li>
+                    <b>No Warranty:</b> We disclaim all warranties, including
+                    but not limited to, implied warranties of merchantability,
+                    fitness for a particular purpose, and non-infringement.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Limitation of Liability</b>
+                <ul>
+                  <li>
+                    <b>Maximum Liability:</b> To the fullest extent permitted by
+                    law, Dominate Ignite's total liability to you for any claims
+                    arising out of or relating to these Terms or our Services is
+                    limited to the amount you paid us for the Services.
+                  </li>
+                  <li>
+                    <b>No Indirect Damages:</b> We shall not be liable for any
+                    indirect, incidental, special, consequential, or punitive
+                    damages, including loss of profits, data, or goodwill.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b> Indemnification</b>
+                <p>
+                  You agree to indemnify, defend, and hold harmless Dominate
+                  Ignite, its affiliates, officers, directors, employees,
+                  agents, and licensors from and against any and all claims,
+                  liabilities, damages, losses, or expenses, including
+                  reasonable attorneys' fees, arising out of or in any way
+                  connected with:
+                </p>
+                <ul>
+                  <li>Your access to or use of our Services.</li>
+                  <li>Your violation of these Terms.</li>
+                  <li>
+                    Your infringement of any third-party rights, including
+                    intellectual property or privacy rights.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b> Termination</b>
+                <ul>
+                  <li>
+                    <b>Termination by You:</b> You may terminate our Services at
+                    any time by providing written notice to us.
+                  </li>
+                  <li>
+                    <b>Termination by Us:</b> We reserve the right to suspend or
+                    terminate your access to our Services at any time, with or
+                    without cause or notice.
+                  </li>
+                  <li>
+                    <b>Effect of Termination:</b> Upon termination, all rights
+                    and licenses granted to you will cease immediately. Sections
+                    relating to Fees and Payment, Confidentiality, Limitation of
+                    Liability, Indemnification, and Governing Law will survive
+                    termination.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Governing Law and Jurisdiction</b>
+                <ul>
+                  <li>
+                    These Terms are governed by and construed in accordance with
+                    the laws of the Commonwealth of Virginia, United States,
+                    without regard to its conflict of laws principles.
+                  </li>
+                  <li>
+                    Any legal action or proceeding arising under these Terms
+                    shall be brought exclusively in the federal or state courts
+                    located in Virginia, and the parties hereby consent to the
+                    personal jurisdiction and venue therein.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Dispute Resolution</b>
+                <ul>
+                  <li>
+                    <b>Negotiation:</b> In the event of any dispute, claim, or
+                    controversy arising out of or relating to these Terms or the
+                    breach, termination, enforcement, interpretation, or
+                    validity thereof, the parties agree to first attempt to
+                    resolve the dispute through informal negotiations.
+                  </li>
+                  <li>
+                    <b>Mediation/Arbitration:</b> If the dispute cannot be
+                    resolved through negotiation, the parties may agree to
+                    proceed to mediation or binding arbitration as an
+                    alternative to litigation.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Changes to the Terms</b>
+                <p>
+                  We reserve the right to modify or replace these Terms at any
+                  time. Any changes will be effective immediately upon posting
+                  the updated Terms on our
+                  <a href="https://www.dominate-ignite.com">Website</a>. Your
+                  continued use of the Services after any such changes
+                  constitutes your acceptance of the new Terms.
+                </p>
+              </li>
+              <li>
+                <b>Entire Agreement</b>
+                <p>
+                  These Terms, along with any other legal notices and agreements
+                  published by us on the
+                  <a href="https://www.dominate-ignite.com">Website</a>,
+                  constitute the entire agreement between you and Dominate
+                  Ignite concerning the Services.
+                </p>
+              </li>
+              <li>
+                <b>Severability</b>
+                <p>
+                  If any provision of these Terms is found to be invalid or
+                  unenforceable by a court of competent jurisdiction, that
+                  provision will be enforced to the maximum extent permissible,
+                  and the other provisions of these Terms will remain in full
+                  force and effect.
+                </p>
+              </li>
+              <li>
+                <b>Waiver</b>
+                <p>
+                  No waiver of any term of these Terms shall be deemed a further
+                  or continuing waiver of such term or any other term, and
+                  Dominate Ignite's failure to assert any right or provision
+                  under these Terms shall not constitute a waiver of such right
+                  or provision.
+                </p>
+              </li>
+              <li>
+                <b>Contact Information</b>
+                <ul>
+                  <li>
+                    If you have any questions or concerns about these Terms or
+                    our Services, please contact us:
+                  </li>
+                  <li>
+                    <b>Email:</b>
+                    <a href="mailto:info@dominate-ignite.com"
+                      >info@dominate-ignite.com</a
+                    >
+                  </li>
+                  <li>
+                    <b>Phone:</b>
+                    <a href="tel:+1 (703) 655-7233"> +1 (703) 655-7233 </a>
+                  </li>
+                  <li>
+                    <b>Company Information:</b>
+                    <ul>
+                      <li><b>Company Name:</b> Dominate Ignite</li>
+                      <li>
+                        <b>Address:</b>
+                        <a
+                          href="https://www.google.com/maps?q=1750+Tysons+Blvd+Ste+1500,+McLean,+VA+22102"
+                          target="_blank"
+                        >
+                          1750 Tysons Blvd Ste 1500, McLean, VA 22102
+                        </a>
+                      </li>
+
+                      <li>
+                        <b>Website:</b>
+                        <a href="https://www.dominate-ignite.com"
+                          >www.dominate-ignite.com</a
+                        >
+                      </li>
+                      <li>
+                        <b>Governing Law:</b> These Terms will be governed by
+                        and construed in accordance with the laws of the
+                        Commonwealth of Virginia.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--privacy policy-->
+    <div class="policycontainer">
+      <div class="policycontent">
+        <div class="closepolicy">
+          <i class="ph ph-x-circle"></i>
+        </div>
+        <div class="policy-head">
+          <h2>Privacy Policy</h2>
+        </div>
+        <div class="policy">
+          <div>
+            <p>
+              This Portfolio site is hosted by Wix.com. They provide us with the
+              online e-commerce platform that allows us to sell Dominate Ignite
+              Services to you.
+            </p>
+            <p>
+              We know that you care how information about you is used and
+              shared, and we appreciate your trust that we will do so carefully
+              and sensibly. This Privacy Notice describes how Dominate Ignite
+              collects and processes your personal information through our
+              website and Dominate Ignite Services.
+            </p>
+          </div>
+          <div class="policy-list">
+            <ol>
+              <li>
+                <b>What personal information about customers do we collect?</b>
+                <p>
+                  In order for us to provide and continually improve our
+                  products and services, we collect certain types of personal
+                  information. The following are the types of personal
+                  information we collect:
+                </p>
+                <ul>
+                  <li>
+                    <b>Information You Give Us:</b>
+                    <p>
+                      We receive and store any information you provide in
+                      relation to Dominate Ignite Services. You can choose not
+                      to provide certain information, but then you might not be
+                      able to take advantage of, or use, Dominate Ignite
+                      Services.
+                    </p>
+                  </li>
+                  <li>
+                    <b>Automatic Information:</b>
+                    <p>
+                      We automatically collect and store certain types of
+                      information about your use of Dominate Ignite Services,
+                      including, but not limited to, information about your
+                      interaction with content and services available through
+                      Dominate Ignite Services, web browser, log files, IP
+                      address, web beacons, tags, pixels, time zone, and device.
+                      Like many websites, we use "cookies" and other unique
+                      identifiers, and we obtain certain types of information
+                      when your web browser or device accesses Dominate Ignite
+                      Services and other content served by or on behalf of
+                      Dominate Ignite on other websites.
+                    </p>
+                  </li>
+                  <li>
+                    <b>Information from Other Sources:</b>
+                    <p>
+                      We might receive information about you from other sources,
+                      such as updated delivery and address information from our
+                      carriers or vendors, which we use to correct our records
+                      and deliver your next purchase more easily.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>What about cookies and other identifiers?</b>
+                <p>
+                  To enable our systems to recognize your browser or device and
+                  to provide and improve Dominate Ignite Services, we use
+                  cookies and other identifiers. We use cookies, pixels, and
+                  other technologies (collectively, "cookies") to recognize your
+                  browser or device, learn more about your interests, and
+                  provide you with essential features and services and for
+                  additional purposes, including, but not limited to:
+                </p>
+                <ul>
+                  <li>
+                    Recognizing you when you sign-in to your Dominate Ignite
+                    Account: This allows us to provide you with product
+                    recommendations, display personalized content, recognize you
+                    as a member, enable you to use 1-Click purchasing, and
+                    provide other customized features and services.
+                  </li>
+                  <li>
+                    Keeping track of your specified preferences: This allows us
+                    to honor your preferences you are able to control.
+                  </li>
+                  <li>
+                    Fraud and Security: Preventing fraudulent activity and
+                    improving security.
+                  </li>
+                  <li>
+                    Advertising: Delivering content, including ads, relevant to
+                    your interests on our website and third-party sites.
+                  </li>
+                  <li>
+                    Reporting: This allows us to measure and analyze the
+                    performance of Dominate Ignite Services and website.
+                  </li>
+                </ul>
+                <p>
+                  Dominate Ignite’s cookies allow you to take advantage of some
+                  of Dominate Ignite Services and essential features. For
+                  instance, if you block or otherwise reject our cookies, you
+                  will not be able to add items to your Shopping Cart, proceed
+                  to Checkout, or use any Dominate Ignite Services that require
+                  you to sign in. Please note that we do not alter our data
+                  collection and use practices when you have a “Do Not Track”
+                  signal from your browser.
+                </p>
+                <p>
+                  Approved third parties may also set cookies when you interact
+                  with Dominate Ignite Services. Third parties include search
+                  engines, providers of measurement and analytics services,
+                  social media networks, and advertising companies. Third
+                  parties use cookies in the process of delivering content,
+                  including ads relevant to your interests, to measure the
+                  effectiveness of their ads, and to perform services on behalf
+                  of Dominate Ignite. You can manage browser cookies through
+                  your browser settings. The 'Help' feature on most browsers
+                  will tell you how to prevent your browser from accepting new
+                  cookies, how to have the browser notify you when you receive a
+                  new cookie, how to block cookies, and when cookies will
+                  expire. If you block all cookies on your browser, neither we
+                  nor third parties will transfer cookies to your browser. If
+                  you do this, however, you may have to manually adjust some
+                  preferences every time you visit a site and some features and
+                  services may not work.
+                </p>
+              </li>
+              <li>
+                <b>Does Dominate Ignite share your personal information?</b>
+                <p>
+                  Information about our customers is an important part of our
+                  business, and we are not in the business of selling our
+                  customers’ personal information to others. We share customers’
+                  personal information only as described below.
+                </p>
+                <ul>
+                  <li>
+                    <b>Third-Party Service Providers:</b>
+                    <p>
+                      We employ other companies and individuals to perform
+                      functions on our behalf. Examples include fulfilling
+                      orders for products or services, delivering packages,
+                      sending postal mail and e-mail, removing repetitive
+                      information from customer lists, analyzing data, providing
+                      marketing assistance, providing search results and links
+                      (including paid listings and links), processing payments,
+                      transmitting content, scoring, assessing and managing
+                      credit risk, and providing customer service. These
+                      third-party service providers have access to personal
+                      information needed to perform their functions, but may not
+                      use it for other purposes.
+                    </p>
+                  </li>
+                  <li>
+                    <b>Business Transfers:</b>
+                    <p>
+                      As we continue to develop our business, we might sell or
+                      buy other businesses or services. In such transactions,
+                      customer information generally is one of the transferred
+                      business assets but remains subject to the promises made
+                      in any pre-existing Privacy Notice (unless, of course, the
+                      customer consents otherwise). Also, in the unlikely event
+                      that Dominate Ignite or substantially all of its assets
+                      are acquired, customer personal information will of course
+                      be one of the transferred assets.
+                    </p>
+                  </li>
+                  <li>
+                    <b>Protection of Dominate Ignite and Others:</b>
+                    <p>
+                      We release account and other personal information when we
+                      believe release is appropriate to comply with the law or
+                      legal process; enforce or apply our Terms and Conditions,
+                      other policies, and other agreements; or protect the
+                      rights, property, or safety of Dominate Ignite, our users,
+                      or others. This includes exchanging or disclosing
+                      information with other companies, organizations, or
+                      governmental authorities for fraud protection and credit
+                      risk reduction.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>How secure is information about you?</b>
+                <p>
+                  Your security and privacy are very important to us. Below are
+                  a few insights into how seriously we take this.
+                </p>
+                <ul>
+                  <li>
+                    We work to protect the security of your personal information
+                    during transmission by using encryption protocols and
+                    software.
+                  </li>
+                  <li>
+                    We follow the Payment Card Industry Data Security Standard
+                    (PCI DSS) when handling credit card data.
+                  </li>
+                  <li>
+                    We maintain physical, electronic, and procedural safeguards
+                    in connection with the collection, storage, and disclosure
+                    of personal information. Our security procedures mean that
+                    we may occasionally request proof of identity before we
+                    disclose personal information to you.
+                  </li>
+                  <li>
+                    It is important for you to protect against unauthorized
+                    access to your account and password, and to your computers,
+                    devices, and applications. Be sure to sign off when finished
+                    using a shared computer.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <ul>
+              <li><b>Dominate Ignite</b></li>
+              <li>
+                Email:
+                <a href="mailto:info@dominate-ignite.com"
+                  >info@dominate-ignite.com</a
+                >
+              </li>
+              <li>Phone: <a href="tel:+17036557233">+1 (703) 655-7233</a></li>
+              <li>
+                Website:
+                <a href="http://www.dominate-ignite.com" target="_blank"
+                  >www.dominate-ignite.com</a
+                >
+              </li>
+            </ul>
+            <p>
+              This updated Privacy Policy now reflects Dominate Ignite's contact
+              details. If you need further adjustments or clarification, feel
+              free to ask!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--refund policy-->
+    <div class="refundcontainer">
+      <div class="refundcontent">
+        <div class="closerefund">
+          <i class="ph ph-x-circle"></i>
+        </div>
+        <div class="refund-head">
+          <h2>Refund Policy</h2>
+        </div>
+        <div class="refund">
+          <div>
+            <p>
+              At Dominate Ignite, your satisfaction is our top priority. We are
+              committed to providing high-quality services and ensuring that our
+              clients are fully satisfied with the results. If you are not
+              completely satisfied with our work, we offer the following refund
+              policy to address your concerns.
+            </p>
+          </div>
+          <div class="refund-list">
+            <ol>
+              <li>
+                <b>Submission of Refund Requests</b>
+                <ul>
+                  <li>
+                    <b>Timeframe for Requests:</b> All refund requests must be
+                    made in writing and submitted within 30 days of the
+                    completion of the service.
+                  </li>
+                  <li>
+                    <b>How to Submit a Request:</b> Send your refund request to
+                    <a href="mailto:info@dominate-ignite.com"
+                      >info@dominate-ignite.com</a
+                    >.
+                  </li>
+                  <li>
+                    <b>Required Information:</b>
+                    <ul>
+                      <li>Your full name and contact information.</li>
+                      <li>Date of service completion.</li>
+                      <li>
+                        Detailed explanation of the reasons for your
+                        dissatisfaction.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Refund Eligibility</b>
+                <ul>
+                  <li>
+                    <b>Maximum Refund Amount:</b> Refunds are limited to a
+                    maximum of 55% of the total order value.
+                  </li>
+                  <li>
+                    <b>Eligible Services:</b> Refunds will be considered for
+                    portions of the service that did not meet the agreed-upon
+                    specifications as outlined in our service agreement.
+                  </li>
+                  <li>
+                    <b>Ineligible Services:</b>
+                    <ul>
+                      <li>
+                        Services that have already been delivered and accepted.
+                      </li>
+                      <li>Services currently in progress.</li>
+                      <li>Third-party services or products.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Cancellation Policy</b>
+                <ul>
+                  <li>
+                    <b>Before Service Completion:</b> If you cancel a service
+                    before its completion, a refund may be issued at our
+                    discretion, not to exceed 55% of the order value.
+                  </li>
+                  <li>
+                    <b>After Service Completion:</b> No refunds will be issued
+                    once the service has been completed and delivered.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Approval Process</b>
+                <ul>
+                  <li>
+                    <b>Review Procedure:</b> Upon receiving your refund request,
+                    we will conduct a thorough review to determine its validity
+                    based on the criteria outlined in this policy.
+                  </li>
+                  <li>
+                    <b>Notification of Decision:</b> We will notify you of our
+                    decision regarding your refund request within 10 business
+                    days of receipt.
+                  </li>
+                  <li>
+                    <b>Right to Refuse:</b> We reserve the right to refuse any
+                    refund request that we deem unreasonable, invalid, or not in
+                    compliance with this policy.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Refund Disbursement</b>
+                <ul>
+                  <li>
+                    <b>Processing Time:</b> Approved refunds will be processed
+                    and issued within 30 days of the refund approval date.
+                  </li>
+                  <li>
+                    <b>Method of Refund:</b> Refunds will be issued using the
+                    original payment method unless otherwise agreed upon in
+                    writing.
+                  </li>
+                  <li>
+                    <b>Confirmation:</b> You will receive a confirmation email
+                    once the refund has been processed.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Third-Party Services</b>
+                <ul>
+                  <li>
+                    <b>Exclusions:</b> This refund policy applies exclusively to
+                    services provided directly by Dominate Ignite. It does not
+                    cover any third-party services or products that we may
+                    recommend, utilize, or provide as part of our services.
+                  </li>
+                  <li>
+                    <b>Third-Party Policies:</b> For refunds related to
+                    third-party services or products, please refer to the
+                    respective third party's refund policy.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Acceptance of Terms</b>
+                <ul>
+                  <li>
+                    <b>Acknowledgment:</b> By engaging our services, you
+                    acknowledge and agree to the terms outlined in this refund
+                    policy.
+                  </li>
+                  <li>
+                    <b>Responsibility:</b> It is your responsibility to
+                    familiarize yourself with these terms before purchasing our
+                    services.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Contact Information</b>
+                <ul>
+                  <li>
+                    Email:
+                    <a href="mailto:info@dominate-ignite.com"
+                      >info@dominate-ignite.com</a
+                    >
+                  </li>
+                  <li>
+                    Phone:
+                    <a href="tel:+1 (703) 655-7233"> +1 (703) 655-7233 </a>
+                  </li>
+                  <li>
+                    Customer Service Hours: Monday thru Friday, 9 am to 5 pm EST
+                  </li>
+                  <li>
+                    Our customer service team is dedicated to assisting you and
+                    will respond to your inquiries promptly.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <b>Changes to This Policy</b>
+                <ul>
+                  <li>
+                    <b>Right to Modify:</b> We reserve the right to modify or
+                    update this refund policy at any time without prior notice.
+                  </li>
+                  <li>
+                    <b>Effective Date:</b> Any changes will be effective
+                    immediately upon posting the updated policy on our website.
+                  </li>
+                  <li>
+                    <b>Continued Use:</b> Your continued use of our services
+                    after any modifications indicates your acceptance of the
+                    updated policy.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+
+            <p>
+              <b>Note: </b> This refund policy is an integral part of our
+              commitment to transparency and customer satisfaction. We encourage
+              you to reach out to us with any concerns so that we may address
+              them promptly and effectively.
+            </p>
+            <p>
+              Thank you for choosing Dominate Ignite. We appreciate your
+              business and look forward to serving you with excellence.
+            </p>
+            <ul>
+              <li><b>Dominate Ignite</b></li>
+              <li>
+                Email:
+                <a href="mailto:info@dominate-ignite.com"
+                  >info@dominate-ignite.com</a
+                >
+              </li>
+              <li>Phone: <a href="tel:+17036557233">+1 (703) 655-7233</a></li>
+              <li>
+                Website:
+                <a href="http://www.dominate-ignite.com" target="_blank"
+                  >www.dominate-ignite.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--section1-servicepage-->
+    <div class="section1-servicepage">
+      <div class="row section1-servicepage-row">
+        <div class="col-12 col-lg-7 servicepage-wrapper">
+          <h2>
+            Suspicious Payment Activity: How Dominate Ignite Helps You Resolve
+            Payment Issues
+          </h2>
+          <div class="servicepage-content">
+            <div>
+              <h4>Understanding Suspicious Payment Activity and Its Impact</h4>
+              <p>
+                In today’s digital landscape, online businesses rely heavily on
+                secure payment processing systems to facilitate transactions.
+                However, platforms like Google Ads, Merchant Center, and Google
+                My Business have stringent policies to prevent fraudulent or
+                unauthorized transactions. If your account is flagged for
+                Suspicious Payment Activity, it can lead to suspensions, payment
+                holds, or even permanent bans from advertising or conducting
+                business online.
+              </p>
+              <p>
+                At Dominate Ignite, we specialize in helping businesses
+                identify, resolve, and prevent issues related to Suspicious
+                Payment Activity suspensions. Our team of experts provides
+                comprehensive account analysis, dispute resolution, and policy
+                compliance strategies to ensure that your business operations
+                continue smoothly.
+              </p>
+            </div>
+            <div>
+              <h4>What Is Suspicious Payment Activity?</h4>
+              <p>
+                Suspicious Payment Activity is a term used by platforms like
+                Google Ads and Merchant Center to describe transactions that
+                appear to be fraudulent, unauthorized, or non-compliant with
+                policies. These activities can include:
+              </p>
+              <ul>
+                <li>
+                  Using multiple payment methods linked to different accounts
+                </li>
+                <li>Frequent chargebacks or refund requests</li>
+                <li>Payments from high-risk or flagged sources</li>
+                <li>Discrepancies between billing and account details</li>
+                <li>Sudden spikes in ad spending or transactions</li>
+              </ul>
+              <p>
+                If your account is flagged for suspicious payments, you may
+                receive an account suspension notification stating that your
+                transactions have been deemed risky or non-compliant.
+              </p>
+            </div>
+            <div>
+              <h4>
+                Why Google and Other Platforms Flag Accounts for Suspicious
+                Payment Activity
+              </h4>
+              <p>
+                Google and other platforms implement advanced fraud detection
+                systems that analyze payment patterns in real time. If any
+                irregularities are detected, the system may automatically
+                suspend the account to prevent potential fraud or misuse. Common
+                reasons include:
+              </p>
+              <ul>
+                <li>
+                  <b>Mismatched Payment Information:</b>
+                  <p>
+                    If the payment method details do not match the account
+                    holder's credentials, the transaction might be flagged.
+                  </p>
+                </li>
+                <li>
+                  <b>Unusual Spending Patterns:</b>
+                  <p>
+                    A sudden increase in ad spend, especially from a new
+                    account, can raise red flags.
+                  </p>
+                </li>
+                <li>
+                  <b>Payment Method Abuse:</b>
+                  <p>
+                    Using multiple credit cards or switching payment methods
+                    frequently can trigger a suspension.
+                  </p>
+                </li>
+                <li>
+                  <b>Violation of Google’s Payment Policies:</b>
+                  <p>
+                    If an account is linked to previously suspended accounts, it
+                    may also get flagged.
+                  </p>
+                </li>
+                <li>
+                  <b>Chargebacks or Refund Requests:</b>
+                  <p>
+                    Repeated chargebacks indicate potential fraud, leading to
+                    account restrictions.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>
+                How Dominate Ignite Helps You Resolve Suspicious Payment
+                Activity Issues
+              </h3>
+              <p>
+                At Dominate Ignite, we understand how frustrating it can be to
+                have your business operations disrupted due to a payment-related
+                suspension. Our team offers a step-by-step resolution process to
+                help you reinstate your account and prevent future suspensions.
+              </p>
+              <ol>
+                <li>
+                  <h5><b>In-Depth Account Analysis</b></h5>
+                  <p>
+                    Our team performs a comprehensive audit of your account,
+                    reviewing:
+                  </p>
+                  <ul>
+                    <li>Payment history and transaction logs</li>
+                    <li>Billing details and linked accounts</li>
+                    <li>Past suspensions or policy violations</li>
+                    <li>Account verification documents</li>
+                  </ul>
+                  <p>
+                    This helps us identify the exact reason behind the
+                    suspicious payment activity flag and determine the best
+                    course of action.
+                  </p>
+                </li>
+                <li>
+                  <h5><b>Crafting a Strong Appeal to Google</b></h5>
+                  <p>
+                    If your account has been suspended due to suspicious
+                    payments, submitting a well-structured and detailed appeal
+                    is crucial. Our experts will:
+                  </p>
+                  <ul>
+                    <li>
+                      Prepare a professional appeal letter addressing Google’s
+                      concerns
+                    </li>
+                    <li>
+                      Provide supporting documents such as invoices, bank
+                      statements, and payment verification
+                    </li>
+                    <li>
+                      Ensure compliance with Google’s Payment Policies to
+                      increase the chances of reinstatement
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h5><b>Updating Payment Methods and Business Details</b></h5>
+                  <p>To prevent future suspensions, we guide you in:</p>
+                  <ul>
+                    <li>Using a valid and verifiable payment method</li>
+                    <li>
+                      Ensuring billing information matches your business details
+                    </li>
+                    <li>Removing any linked high-risk accounts</li>
+                    <li>Implementing secure payment practices</li>
+                  </ul>
+                </li>
+                <li>
+                  <h5><b>Ongoing Compliance and Prevention Strategy</b></h5>
+                  <p>
+                    Once your account is reinstated, we help you implement
+                    long-term compliance strategies, including:
+                  </p>
+                  <ul>
+                    <li>
+                      Monitoring transaction activity to detect and prevent
+                      issues early
+                    </li>
+                    <li>
+                      Regular account audits to maintain compliance with
+                      Google’s policies
+                    </li>
+                    <li>
+                      Training your team on best practices for payment security
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h5><b>Implementation Support & Ongoing Monitoring</b></h5>
+                  <p>
+                    Once the recommended changes are implemented, we provide
+                    continuous monitoring to ensure your account remains in good
+                    standing and performs optimally.
+                  </p>
+                </li>
+              </ol>
+            </div>
+            <!-- <div>
+              <h3>Common Issues We Identify and Fix</h3>
+              <ol>
+                <li>
+                  <h5><b>Policy Violations Leading to Suspension</b></h5>
+                  <p>
+                    Many advertisers unknowingly violate Google’s policies,
+                    leading to account restrictions. Our team helps resolve
+                    issues related to:
+                  </p>
+                  <ul>
+                    <li>Circumventing system policies</li>
+                    <li>Misrepresentation or misleading content</li>
+                    <li>Prohibited or restricted content</li>
+                    <li>Unacceptable business practices</li>
+                  </ul>
+                </li>
+                <li>
+                  <h5><b>Poor Campaign Structure</b></h5>
+                  <p>
+                    A disorganized campaign structure can lead to poor
+                    performance. We optimize ad groups, targeting, and bidding
+                    strategies to enhance efficiency.
+                  </p>
+                </li>
+                <li>
+                  <h5><b>Inefficient Budget Allocation</b></h5>
+                  <p>
+                    Wasted ad spend is a common problem. We identify
+                    underperforming campaigns, adjust bidding strategies, and
+                    reallocate budgets for better ROI.
+                  </p>
+                </li>
+                <li>
+                  <h5><b>Low Ad Quality & Relevance</b></h5>
+                  <p>
+                    Google prioritizes high-quality ads that provide a great
+                    user experience. We improve ad copy, creatives, and keyword
+                    relevance to boost Quality Score.
+                  </p>
+                </li>
+                <li>
+                  <h5><b>Conversion Tracking Issues</b></h5>
+                  <p>
+                    Without accurate tracking, measuring success is difficult.
+                    We set up and optimize conversion tracking to provide
+                    real-time performance insights.
+                  </p>
+                </li>
+              </ol>
+            </div> -->
+            <div class="whychoose">
+              <h3>
+                Why Choose Dominate Ignite for Suspicious Payment Activity
+                Resolution?
+              </h3>
+              <ul>
+                <li>
+                  <b>Expertise in Google’s Policies:</b>
+                  <p>
+                    Our team stays updated on Google’s latest payment policies
+                    and fraud detection mechanisms.
+                  </p>
+                </li>
+                <li>
+                  <b>Proven Track Record:</b>
+                  <p>
+                    We have successfully helped businesses regain access to
+                    their Google Ads and Merchant Center accounts.
+                  </p>
+                </li>
+                <li>
+                  <b>Personalized Support:</b>
+                  <p>
+                    Every case is unique, and we provide tailored solutions
+                    based on your specific situation.
+                  </p>
+                </li>
+                <li>
+                  <b>Fast and Efficient Resolution:</b>
+                  <p>
+                    We work quickly to minimize downtime and get your account
+                    back in action.
+                  </p>
+                </li>
+                <li>
+                  <b>Ongoing Assistance:</b>
+                  <p>
+                    We don’t just resolve the issue; we help you prevent future
+                    suspensions.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>
+                Best Practices to Avoid Suspicious Payment Activity Suspensions
+              </h3>
+              <p>
+                To keep your account in good standing and avoid future flags,
+                follow these essential best practices:
+              </p>
+              <ol>
+                <li>
+                  <h5><b>Use a Verified Payment Method</b></h5>
+                  <p>
+                    Our team performs a comprehensive audit of your account,
+                    reviewing:
+                  </p>
+                  <ul>
+                    <li>
+                      Ensure your credit/debit card is registered under your
+                      business name
+                    </li>
+                    <li>
+                      Use a reputable payment provider with a strong fraud
+                      prevention system
+                    </li>
+                    <li>
+                      Avoid prepaid or virtual cards that may trigger red flags
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h5><b>Maintain Consistency in Account Information</b></h5>
+                  <p>
+                    Ensuring consistency in your account details can prevent
+                    unnecessary suspensions. Follow these steps:
+                  </p>
+                  <ul>
+                    <li>
+                      Ensure your billing address, contact details, and business
+                      information match across all platforms
+                    </li>
+                    <li>
+                      Do not frequently change payment methods unless necessary
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h5><b>Monitor Your Transactions</b></h5>
+                  <p>
+                    Regularly reviewing your payment activity helps avoid
+                    potential issues:
+                  </p>
+                  <ul>
+                    <li>
+                      Regularly check your payment history for any discrepancies
+                    </li>
+                    <li>
+                      Avoid sudden increases in ad spend without prior account
+                      history
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h5><b>Keep Your Business Verified</b></h5>
+                  <p>
+                    Verification ensures legitimacy and prevents account
+                    suspension:
+                  </p>
+                  <ul>
+                    <li>
+                      Complete all required Google Business Verification
+                      processes
+                    </li>
+                    <li>
+                      Provide accurate documentation when requested by Google
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h5><b>Work with Experts Like Dominate Ignite</b></h5>
+                  <p>
+                    Professional assistance can help you navigate account
+                    suspensions effectively:
+                  </p>
+                  <ul>
+                    <li>
+                      If you experience repeated suspensions, consult
+                      professionals who can help resolve issues efficiently and
+                      ensure compliance
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            <div>
+              <h3>Frequently Asked Questions (FAQs)</h3>
+              <div class="faqs-accordion a12">
+                <div
+                  class="accordion accordion-flush"
+                  id="accordionFlushExample"
+                >
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseOne"
+                      >
+                        How long does it take to recover a suspended Google Ads
+                        account?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseOne"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        The timeframe for reinstatement varies based on the
+                        complexity of the suspension. On average, appeals take
+                        between 5-15 business days. However, cases requiring
+                        extensive remediation may take longer.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseTwo"
+                      >
+                        Can I create a new Google Ads account instead of
+                        appealing?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        No. Creating a new account to bypass a suspension
+                        violates Google’s policies and can lead to a permanent
+                        ban across all Google platforms.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        What if my appeal is denied?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        If your appeal is denied, we reassess the case, address
+                        any additional concerns, and submit a revised appeal
+                        with further clarifications.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseFour"
+                      >
+                        Can you guarantee my account will be reinstated?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        While no agency can guarantee reinstatement (as final
+                        decisions rest with Google), our expertise and high
+                        success rate significantly improve your chances of
+                        recovery.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseFive"
+                      >
+                        What should I do to prevent future suspensions?
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        We recommend adhering to Google’s policies, conducting
+                        regular compliance audits, and avoiding deceptive
+                        practices. We offer ongoing consultation to keep your
+                        business in compliance.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>
+                Conclusion: Get Your Account Reinstated with Dominate Ignite
+              </h3>
+              <p>
+                Having your Google Ads or Merchant Center account suspended due
+                to Suspicious Payment Activity can be frustrating and costly.
+                But with the right approach and expert guidance, you can
+                overcome these challenges and restore your business operations
+                smoothly.
+              </p>
+              <p>
+                At Dominate Ignite, we specialize in account recovery, dispute
+                resolution, and compliance strategies to ensure your account
+                remains active and secure. Let us handle the complexities while
+                you focus on growing your business.
+              </p>
+              <p>
+                <i>
+                  Get in touch with us today and take the first step toward
+                  reinstating your account!</i
+                >
+              </p>
+            </div>
+          </div>
+          <!--servicepage-content end-->
+        </div>
+        <!--servicepage-wrapper-end-->
+
+        <!--service page form -->
+        <div class="col-12 col-lg-5 servicepage-form">
+          <div class="sticky-form">
+            <div class="popup-form">
+              <img
+                class="rays img-fluid"
+                src="./images/rays.webp"
+                alt="gradient rays"
+              />
+              <h2>Schedule a Free Consultation Today</h2>
+
+              <form
+                class="row g-4"
+                action="sendmail.php"
+                method="POST"
+                id="contactForm"
+              >
+                <div class="col-md-6">
+                  <!-- <label for="inputFirstName" class="form-label">First Name</label> -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name"
+                    id="inputFirstName"
+                    name="name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <!-- <label for="inputLastName" class="form-label">Last Name</label> -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name"
+                    id="inputLastName"
+                    name="lname"
+                  />
+                </div>
+                <div class="col-12">
+                  <!-- <label for="inputContact" class="form-label"
+                                >Contact Number</label
+                              > -->
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Contact Number"
+                    id="inputContact"
+                    min="0"
+                    name="number"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+                  />
+                </div>
+                <div class="col-12">
+                  <!-- <label for="inputEmail4" class="form-label">Email</label> -->
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="form-control"
+                    id="inputEmail4"
+                    name="email"
+                  />
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a comment here"
+                      name="message"
+                      id="floatingTextarea2"
+                      style="height: 100px"
+                    ></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                  </div>
+                </div>
+
+                <div class="col-12 checkbox-input">
+                  <input type="checkbox" checked required />
+                  <label>
+                    I agree to the
+                    <a href="#!" class="showterms2">Terms of Service </a> ,
+                    <a href="#!" class="showpolicy2">Privacy Policy</a> and
+                    <a href="#!" class="showrefund"> Refund Policy </a>
+                  </label>
+                </div>
+
+                <!-- Google reCAPTCHA -->
+                <div class="col-12">
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6Lf6l9oqAAAAACYb1vq-EuC0eYGglwQ-gdd_-MkZ"
+                  ></div>
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="submit" name="sub">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+      <img
+        src="./images/footer-bg.webp"
+        class="footer-bg"
+        alt="gradient-rays"
+        loading="lazy"
+      />
+      <div class="footer-wrapper">
+        <div class="footer-head">
+          <div class="col-112 col-lg-10 footer-head-content">
+            <p>Let’s elevate your business to new heights</p>
+            <p>Reach out to and let’s embark on the journey together!</p>
+            <a href="#!" class="btns form-btn">
+              Get Started <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-menus">
+          <div class="row footer-menus-row">
+            <div class="col-12 col-lg-4 footer-menu-content footer-logo">
+              <a href="index.html">
+                <img
+                  src="./images/ignite-logo-footer.webp"
+                  class="img-fluid"
+                  alt="logo-image"
+                />
+              </a>
+              <ul>
+                <li><a href="tel:+17036557233"> Phone: +1 703 655-7233 </a></li>
+                <li>
+                  <a href="mailto:info@dominate-ignite.com">
+                    Email: info@dominate-ignite.com
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.google.com/maps?q=1750+Tysons+Blvd+Ste+1500,+McLean,+VA+22102"
+                    target="_blank"
+                  >
+                    1750 Tysons Blvd Ste 1500, McLean, VA 22102
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content">
+              <p>What we offer</p>
+              <ul>
+                <li><a href="#!">Expertise and experience</a></li>
+                <li><a href="#!">Review and action plan</a></li>
+                <li><a href="#!">Appeals and communication</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content">
+              <p>How it works</p>
+              <ul>
+                <li><a href="#!"> Initial Consultation</a></li>
+                <li><a href="#!"> Account Review and Strategy </a></li>
+                <li><a href="#!">Actions and Appeals </a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content">
+              <p>Quick Links</p>
+              <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services </a></li>
+                <li><a href="contact.html"> Contact Us </a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-2 footer-menu-content follow-us">
+              <p>Follow Us</p>
+              <ul>
+                <li>
+                  <a href="#!">
+                    <i class="ph-fill ph-facebook-logo"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!"> <i class="ph-fill ph-x-logo"></i> </a>
+                </li>
+                <li>
+                  <a href="#!"> <i class="ph-fill ph-instagram-logo"></i> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>© 2025 . All Rights Reserved.</p>
+          <p class="policies">
+            <a href="#!" class="showterms"> Terms of Service </a> |
+            <a href="#!" class="showprivacy"> Privacy Policy </a>|
+            <a href="#!" class="showrefund"> Refund Policy </a>|
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--bootstrap js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- captcha  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!--script-->
+    <script src="./script/index.js"></script>
+  </body>
+</html>

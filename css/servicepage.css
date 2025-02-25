@@ -12,9 +12,9 @@
 .servicepage-wrapper h2 {
   font-family: var(--national);
   color: var(--text);
-  font-size: 72px;
+  font-size: 64px;
   font-weight: 400;
-  line-height: 84px;
+  line-height: 72px;
   margin-bottom: 0.8em;
   letter-spacing: 0.5px;
 }
