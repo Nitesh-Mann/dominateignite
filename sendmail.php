@@ -81,7 +81,7 @@ if (isset($_POST['sub'])) {
         $service = isset($_POST['service']) ? $_POST['service'] : 'Not selected'; // Service dropdown
 
         // Recipient email
-        $to = "maannitesh13@gmail.com";  // Change to your recipient email
+        $to = "info@dominate-ignite.com";  // Change to your recipient email
         $subject = "New Lead";
 
         // Form message content
