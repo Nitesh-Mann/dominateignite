@@ -55,7 +55,6 @@
 //         }
 //     }
 // }
-<?php
 if (isset($_POST['sub'])) {
     // Google reCAPTCHA Secret Key
     $secretKey = "6Lf6l9oqAAAAAAS9E-tlVXq7-0FzsbHiZyJmDodC"; // Replace with your Secret Key
@@ -115,6 +114,5 @@ if (isset($_POST['sub'])) {
 }
 ?>
 
-?>
 
 
