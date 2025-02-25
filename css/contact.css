@@ -23,7 +23,7 @@
 .contact-head form {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
 
 .contact-head form label {

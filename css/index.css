@@ -359,6 +359,16 @@ body {
   height: 24px;
 }
 
+.popup-form select {
+  font-family: var(--satoshi);
+  /* background-color: transparent; */
+}
+
+.popup-form select option {
+  color: var(--text);
+  background-color: var(--color1);
+}
+
 /*header-wrapper*/
 
 .header1 {
