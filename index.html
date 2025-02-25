@@ -66,47 +66,46 @@
             id="contactForm"
           >
             <div class="col-md-6">
-              <!-- <label for="inputFirstName" class="form-label">First Name</label> -->
               <input
                 type="text"
                 class="form-control"
                 placeholder="First Name"
                 id="inputFirstName"
                 name="name"
+                required
               />
             </div>
             <div class="col-md-6">
-              <!-- <label for="inputLastName" class="form-label">Last Name</label> -->
               <input
                 type="text"
                 class="form-control"
                 placeholder="Last Name"
                 id="inputLastName"
                 name="lname"
+                required
               />
             </div>
             <div class="col-12">
-              <!-- <label for="inputContact" class="form-label"
-                >Contact Number</label
-              > -->
               <input
                 type="number"
                 class="form-control"
                 placeholder="Contact Number"
                 id="inputContact"
-                min="0"
                 name="number"
+                required
                 oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+                minlength="10"
+                maxlength="10"
               />
             </div>
             <div class="col-12">
-              <!-- <label for="inputEmail4" class="form-label">Email</label> -->
               <input
                 type="email"
                 placeholder="Email"
                 class="form-control"
                 id="inputEmail4"
                 name="email"
+                required
               />
             </div>
             <div class="col-12">
@@ -117,13 +116,20 @@
                   name="message"
                   id="floatingTextarea2"
                   style="height: 100px"
+                  required
                 ></textarea>
                 <label for="floatingTextarea2">Comments</label>
               </div>
             </div>
+
             <!-- Service Selection Dropdown -->
             <div class="col-12">
-              <select class="form-control" id="serviceSelect" name="service">
+              <select
+                class="form-control"
+                id="serviceSelect"
+                name="service"
+                required
+              >
                 <option value="" disabled selected>Select a service</option>
                 <option value="Suspicious Payment Activity">
                   Suspicious Payment Activity
@@ -156,8 +162,8 @@
               <input type="checkbox" checked required />
               <label>
                 I agree to the
-                <a href="#!" class="showterms2">Terms of Service </a> ,
-                <a href="#!" class="showpolicy2">Privacy Policy</a> and
+                <a href="#!" class="showterms2">Terms of Service </a>,
+                <a href="#!" class="showpolicy2">Privacy Policy</a>, and
                 <a href="#!" class="showrefund"> Refund Policy </a>
               </label>
             </div>
@@ -171,7 +177,9 @@
             </div>
 
             <div class="col-12 mt-4">
-              <button type="submit" name="sub">Send Message</button>
+              <button type="submit" name="sub" class="btn btn-primary w-100">
+                Send Message
+              </button>
             </div>
           </form>
         </div>

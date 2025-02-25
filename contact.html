@@ -1142,9 +1142,10 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="First Name"
+                placeholder="* First Name"
                 id="inputFirstName"
                 name="name"
+                required
               />
             </div>
             <div class="col-12">
@@ -1154,9 +1155,10 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Last Name"
+                placeholder="* Last Name"
                 id="inputLastName"
                 name="lname"
+                required
               />
             </div>
             <div class="col-12">
@@ -1166,11 +1168,13 @@
               <input
                 type="number"
                 class="form-control"
-                placeholder="Contact Number"
+                placeholder="* Contact Number"
                 id="inputContact"
-                min="0"
                 name="number"
+                required
                 oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+                minlength="10"
+                maxlength="10"
               />
             </div>
             <div class="col-12">
@@ -1179,10 +1183,11 @@
               >
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="* Email"
                 class="form-control"
                 id="inputEmail4"
                 name="email"
+                required
               />
             </div>
             <div class="col-12">
@@ -1192,19 +1197,25 @@
               <div class="form-floating">
                 <textarea
                   class="form-control"
-                  placeholder="Leave a comment here"
+                  placeholder="* Leave a comment here"
                   name="message"
                   id="floatingTextarea2"
                   style="height: 120px"
+                  required
                 ></textarea>
               </div>
             </div>
             <div class="col-12">
-              <label for="inputEmail4" class="form-label"
+              <label for="serviceSelect" class="form-label"
                 ><span>06.</span> Select a Service</label
               >
-              <select class="form-control" id="serviceSelect" name="service">
-                <option value="" disabled selected>Select a service</option>
+              <select
+                class="form-control"
+                id="serviceSelect"
+                name="service"
+                required
+              >
+                <option value="" disabled selected>* Select a service</option>
                 <option value="Suspicious Payment Activity">
                   Suspicious Payment Activity
                 </option>
@@ -1236,8 +1247,8 @@
               <label>
                 I agree to the
                 <a href="#!" class="showterms2">Terms & Conditions</a>,
-                <a href="#!" class="showpolicy2">Privacy Policy</a> and
-                <a href="#!" class="showrefund2">Refund Policy </a>
+                <a href="#!" class="showpolicy2">Privacy Policy</a>, and
+                <a href="#!" class="showrefund2">Refund Policy</a>
               </label>
             </div>
             <div class="col-12">
