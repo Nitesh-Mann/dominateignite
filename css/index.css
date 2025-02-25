@@ -226,6 +226,7 @@ body {
   width: 100%;
   z-index: 500;
   display: none;
+  overflow-y: scroll;
 }
 
 .form-wrapper {
@@ -233,8 +234,9 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(1, 2, 17, 0.8);
-  height: 100%;
+  height: 120%;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .form-wrapper .gradient-circle {
@@ -1265,7 +1267,7 @@ body {
   /*pop up form */
 
   .form-container {
-    height: 100%;
+    height: 140%;
   }
 
   .popup-form {
