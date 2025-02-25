@@ -1,12 +1,5 @@
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    // This event is triggered when the page is loaded from the cache (back button action)
-    location.reload();
-  }
-});
-
-//loader animation//
 window.addEventListener("load", function () {
+  // Loader animation
   var loader = document.querySelector(".loader");
 
   // Show loader for 1 second before hiding it
@@ -14,7 +7,15 @@ window.addEventListener("load", function () {
     if (loader) {
       loader.classList.add("hidden");
     }
-  }, 800); // 1 second delay for loader
+  }, 400); // 1 second delay for loader
+
+  // Check if the page is loaded from cache (back button action)
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+      // This event is triggered when the page is loaded from the cache
+      location.reload();
+    }
+  });
 });
 
 // captcha
