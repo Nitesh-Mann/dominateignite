@@ -1,3 +1,15 @@
+//loader animation//
+window.addEventListener("load", function () {
+  var loader = document.querySelector(".loader");
+
+  // Show loader for 1 second before hiding it
+  setTimeout(function () {
+    if (loader) {
+      loader.classList.add("hidden");
+    }
+  }, 500); // 1 second delay for loader
+});
+
 // captcha
 document.getElementById("contactForm").onsubmit = function (event) {
   var recaptchaResponse = grecaptcha.getResponse();
@@ -143,18 +155,6 @@ window.addEventListener("scroll", function () {
   } else {
     header.style.backgroundColor = "transparent";
   }
-});
-
-//loader animation//
-window.addEventListener("load", function () {
-  var loader = document.querySelector(".loader");
-
-  // Show loader for 1 second before hiding it
-  setTimeout(function () {
-    if (loader) {
-      loader.classList.add("hidden");
-    }
-  }, 0); // 1 second delay for loader
 });
 
 // privacy //
