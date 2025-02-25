@@ -1,3 +1,10 @@
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    // This event is triggered when the page is loaded from the cache (back button action)
+    location.reload();
+  }
+});
+
 //loader animation//
 window.addEventListener("load", function () {
   var loader = document.querySelector(".loader");
@@ -50,35 +57,38 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 //form function//
-
 document.addEventListener("DOMContentLoaded", function () {
-  const btns = document.querySelectorAll(".form-btn"); // Select all elements with .btns
+  const btns = document.querySelectorAll(".form-btn"); // Select all elements with .form-btn
   const closeBtn = document.querySelector(".form-close");
   const formContainer = document.querySelector(".form-container");
   const formWrapper = document.querySelector(".form-wrapper");
   const html = document.documentElement; // Select the html element (root element)
   const body = document.body;
+  const form = document.querySelector(".form-wrapper form"); // Select the form inside the wrapper
+
+  function closeForm() {
+    formContainer.style.display = "none"; // Hide the form
+    html.style.overflow = "auto"; // Enable scrolling on the entire page
+    body.style.overflow = "auto"; // Enable scrolling on body as well
+    if (form) {
+      form.reset(); // Clear all input fields
+    }
+  }
 
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
       formContainer.style.display = "block"; // Show the form
       html.style.overflow = "hidden"; // Disable scrolling on the entire page
-      body.style.overflow = "hidden"; // Disable scrolling on body as well (some browsers may need this)
+      body.style.overflow = "hidden"; // Disable scrolling on body as well
     });
   });
 
-  closeBtn.addEventListener("click", function () {
-    formContainer.style.display = "none"; // Hide the form
-    html.style.overflow = "auto"; // Enable scrolling on the entire page
-    body.style.overflow = "auto"; // Enable scrolling on body as well
-  });
+  closeBtn.addEventListener("click", closeForm);
 
   // Hide the form when clicking on .form-container itself
   formWrapper.addEventListener("click", function (event) {
     if (event.target === formWrapper) {
-      formContainer.style.display = "none"; // Hide the form
-      html.style.overflow = "auto"; // Enable scrolling on the entire page
-      body.style.overflow = "auto"; // Enable scrolling on body as well
+      closeForm();
     }
   });
 });
@@ -249,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//refund//
 document.addEventListener("DOMContentLoaded", function () {
   const refundBtns = document.querySelectorAll(".showrefund, .showrefund2");
   const refundWrapper = document.querySelector(".refundcontainer");
