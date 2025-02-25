@@ -74,6 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (form) {
       form.reset(); // Clear all input fields
     }
+
+    // Reset Google reCAPTCHA
+    if (typeof grecaptcha !== "undefined") {
+      grecaptcha.reset();
+    }
   }
 
   btns.forEach((btn) => {
