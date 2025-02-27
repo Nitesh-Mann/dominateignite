@@ -304,6 +304,7 @@
     flex-direction: column;
     gap: 8px;
     margin-top: 0.8em;
+    align-items: start;
   }
 
   /*about-section3*/

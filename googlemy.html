@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Site Verification -->
+    <meta
+      name="google-site-verification"
+      content="OL-EkMFN0L_gS0yYBpcbS9gcwXT8GFb4uB8B2glVeoc"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2JFQPXRBQP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2JFQPXRBQP");
+    </script>
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Cache-Control" content="no-cache" />
@@ -1378,7 +1397,7 @@
                     oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
                   />
                 </div>
-                <div class="col-12">
+                <div class="col-md-6">
                   <!-- <label for="inputEmail4" class="form-label">Email</label> -->
                   <input
                     type="email"
@@ -1386,6 +1405,16 @@
                     class="form-control"
                     id="inputEmail4"
                     name="email"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="url"
+                    class="form-control"
+                    placeholder="Enter your website URL"
+                    id="inputWebsite"
+                    name="website"
+                    required
                   />
                 </div>
                 <div class="col-12">
