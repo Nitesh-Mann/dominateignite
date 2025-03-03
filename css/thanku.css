@@ -1,0 +1,22 @@
+.thanku-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.thanku-content img {
+  object-fit: contain;
+  width: 500px;
+  height: auto;
+}
+
+.thanku-content p {
+  color: var(--text);
+  font-size: 18px;
+  width: 35%;
+  text-align: center;
+  line-height: 32px;
+}
