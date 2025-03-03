@@ -70,7 +70,7 @@ if (isset($_POST['sub'])) {
 
     // If reCAPTCHA is valid, proceed with sending email
     if (intval($responseKeys["success"]) !== 1) {
-        echo "<script>alert('Please complete the reCAPTCHA.'); window.location.href='thanku.html';</script>";
+        echo "<script>alert('Please complete the reCAPTCHA.'); window.location.href='index.html';</script>";
     } else {
         // Fetching form data
         $name = $_POST['name'];
@@ -105,7 +105,7 @@ if (isset($_POST['sub'])) {
         // Sending the email
         if (mail($to, $subject, $email_message, $headers)) {
             // Redirect to a page with a success message if email is sent successfully
-            echo "<script>alert('Your message has been sent successfully!'); window.location.href='index.html';</script>";
+            echo "<script> window.location.href='thanku.html';</script>";
         } else {
             // Show error message if email failed
             echo "<script>alert('Message could not be sent.'); window.location.href='index.html';</script>";
