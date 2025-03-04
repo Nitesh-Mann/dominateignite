@@ -76,18 +76,20 @@ if (isset($_POST['sub'])) {
         $name = $_POST['name'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
+        $website = $_POST['website']; // Get website input
         $num = $_POST['number'];
         $message = isset($_POST['message']) ? $_POST['message'] : ''; // Optional message field
         $service = isset($_POST['service']) ? $_POST['service'] : 'Not selected'; // Service dropdown
 
         // Recipient email
-        $to = "info@dominate-ignite.com";  // Change to your recipient email
+        $to = "maannitesh13@gmail.com";  // Change to your recipient email
         $subject = "New Lead";
 
         // Form message content
         $email_message = "First Name: $name\n";
         $email_message .= "Last Name: $lname\n";
         $email_message .= "Email: $email\n";
+        $email_message .= "Website: $website\n";
         $email_message .= "Contact Number: $num\n";
         $email_message .= "Selected Service: $service\n";
         $email_message .= "Message: $message\n";

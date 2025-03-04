@@ -18,6 +18,17 @@ window.addEventListener("load", function () {
   });
 });
 
+//form www//
+document.querySelectorAll(".website-input").forEach((input) => {
+  input.addEventListener("input", function () {
+    let value = this.value;
+    if (!value.startsWith("www.")) {
+      this.value =
+        "www." + value.replace(/^https?:\/\//, "").replace(/^www\./, "");
+    }
+  });
+});
+
 // captcha
 document.getElementById("contactForm").onsubmit = function (event) {
   var recaptchaResponse = grecaptcha.getResponse();
