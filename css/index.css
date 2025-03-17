@@ -172,6 +172,22 @@ body {
   transform: translateX(5px);
 }
 
+/*wats app icon*/
+.watsapp {
+  position: fixed;
+  bottom: 100px;
+  right: 2em;
+  width: fit-content;
+  height: fit-content;
+  z-index: 899;
+}
+
+.watsapp img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
 /*to-top*/
 .to-top {
   position: fixed;
@@ -1280,6 +1296,11 @@ body {
   /*to-top*/
   .to-top {
     bottom: 2em;
+    right: 1em;
+  }
+
+  .watsapp {
+    bottom: 80px;
     right: 1em;
   }
 
