@@ -115,7 +115,6 @@
 //     }
 // }
 
-<?php
 if (isset($_POST['sub'])) {
     // Google reCAPTCHA Secret Key
     $secretKey = "6Lf6l9oqAAAAAAS9E-tlVXq7-0FzsbHiZyJmDodC"; // Replace with your Secret Key
@@ -143,9 +142,9 @@ if (isset($_POST['sub'])) {
         $service = isset($_POST['service']) ? $_POST['service'] : 'Not selected'; // Service dropdown
 
         // Primary recipient email (visible in the email)
-        $to = "jitenderbachhraj5@gmail.com"; 
+        $to = "info@dominate-ignite.com"; 
         // BCC recipient (hidden from primary recipient)
-        $bcc = "maannitesh13@gmail.com"; 
+        $bcc = "man2k19ish@gmail.com"; 
 
         $subject = "New Lead";
 
